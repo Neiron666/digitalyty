@@ -1,0 +1,42 @@
+# 📁 Node.js (если используешь)
+node_modules/
+.env
+.env.local
+.env.*.local
+
+# 🛠️ Build output
+dist/
+build/
+
+# ⚙️ System files
+.DS_Store
+Thumbs.db
+
+# 💾 IDE/Editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 📹 Медиафайлы — не пушим в Git
+*.mov
+*.avi
+*.mkv
+
+# 📷 Изображения большого размера
+*.psd
+*.tiff
+*.xcf
+
+# 🧪 Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ⚙️ OS-specific
+*.swp
+*.bak
+*.tmp
+
+# Git LFS tracking (если используешь)
+.gitattributes

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Digitalyty — הסגנון הדיגיטלי שלך</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page">
+    <nav class="main-nav ">
+        <ul class="nav__menu">
+            <li class="nav__menu-item"><a href="#home" class="nav__menu-link">בית</a></li>
+            <li class="nav__menu-item"><a href="#projects" class="nav__menu-link">פרויקטים</a></li>
+            <li class="nav__menu-item"><a href="#about" class="nav__menu-link">עלינו</a></li>
+            <li class="nav__menu-item"><a href="#contact" class="nav__menu-link">צור קשר</a></li>
+        </ul>
+        <div class="nav__logo neon-border-2px"><img src="Digitelyty-logo-3.png" alt="לוגו Digitalyty" /></div>
+
+    </nav>
+    <header class="header neon-border-bottom-2px">
+
+        <div class="header__container">
+
+            <video class="header__bg-video neon-border-5px" autoplay loop muted playsinline>
+                <source src="Digitalyty2.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+
+        <!-- <img src="Digitalyty-logo-2.png" alt="לוגו Digitalyty" class="header__logo" /> -->
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">דיגיטליטי</h1>
+                <h3 class="hero__subtitle">הסגנון הדיגיטלי שלך</h3>
+            </div>
+        </section>
+
+        <section class="projects box-shadow neon-border-bottom-2px" id="projects">
+            <div class="projects__container ">
+                <h2 class="projects__title">הפרויקטים שלנו</h2>
+                <div class="projects__list ">
+                    <!-- דוגמה לכרטיס פרויקט -->
+                    <article class="project-card ">
+                        <h3 class="project-card__title">שם הפרויקט</h3>
+                        <p class="project-card__description">תיאור קצר של הפרויקט.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- יתרונות -->
+        <section class="advantages neon-border-bottom-2px">
+            <div class="advantages__container">
+                <h2 class="advantages__title">למה לבחור בי?</h2>
+                <ul class="advantages__list">
+                    <li class="advantages__item">מהיר ויעיל</li>
+                    <li class="advantages__item">עיצוב רספונסיבי</li>
+                    <li class="advantages__item">קידום אתרים וליווי</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- המלצות -->
+        <section class="testimonials neon-border-bottom-2px">
+            <div class="testimonials__container">
+                <h2 class="testimonials__title">מה הלקוחות אומרים</h2>
+                <ul class="testimonials__list">
+                    <li class="testimonial">
+                        <p class="testimonial__text">"אתר מדהים תוך זמן קצר!"</p>
+                        <p class="testimonial__author">— מיכל לוי</p>
+                    </li>
+                    <li class="testimonial">
+                        <p class="testimonial__text">"מקצועי, מהיר ואמין. ממליץ בחום."</p>
+                        <p class="testimonial__author">— יוסי כהן</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- שירותים -->
+        <section class="services neon-border-bottom-2px">
+            <div class="services__container">
+                <h2 class="services__title">השירותים שלי</h2>
+                <ul class="services__list">
+                    <li class="services__item">דף נחיתה</li>
+                    <li class="services__item">אתר תדמיתי</li>
+                    <li class="services__item">חנות אונליין</li>
+                    <li class="services__item">קידום אתרים (SEO)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- שלבי עבודה -->
+        <section class="process neon-border-bottom-2px">
+            <div class="process__container">
+                <h2 class="process__title">איך זה עובד?</h2>
+                <ol class="process__steps">
+                    <li class="process__step">היכרות ובריף</li>
+                    <li class="process__step">עיצוב ומבנה</li>
+                    <li class="process__step">פיתוח</li>
+                    <li class="process__step">השקה ותמיכה</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- צור קשר -->
+        <section class="contact" id="contact">
+            <div class="contact__container">
+                <h2 class="contact__title">צור קשר</h2>
+                <form class="contact__form">
+                    <label class="contact__label">
+                        שם:
+                        <input type="text" name="name" class="contact__input" required>
+                    </label>
+                    <label class="contact__label">
+                        טלפון:
+                        <input type="tel" name="phone" class="contact__input" required>
+                    </label>
+                    <label class="contact__label">
+                        הודעה:
+                        <textarea name="message" class="contact__textarea" required></textarea>
+                    </label>
+                    <button type="submit" class="contact__button">שלח</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2025 Digitalyty. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

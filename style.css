@@ -1,0 +1,508 @@
+/* Цветовая палитра, основанная на логотипе */
+:root {
+    --color-primary: rgba(
+        10,
+        10,
+        10,
+        0.95
+    ); /* Глубокий нейтрально-чёрный фон с прозрачностью */
+    --color-primary-light: #181c20; /* Светлый нейтрально-чёрный фон */
+    --color-black: #000000; /* Абсолютный чёрный */
+    --color-dark: rgba(35, 35, 35, 0.95); /* Немного светлее и полупрозрачный */
+    --color-deep-dark: #2c2c2c; /* Для карточек */
+    --color-accent: #00eaff; /* Холодный неон: свет робота/киберподсветка */
+    --color-white: #f5f5f5; /* Мягкий белый */
+    --color-text: #e0e0e0; /* Светлый, но не резкий текст */
+    --color-text-secondary: #a3a3a3; /* Вторичный серый текст */
+    --color-border: #3f3f46; /* Металлический серо-синий */
+    --color-shadow: rgba(0, 255, 255, 0.8); /* Тень с акцентным неоном */
+    --color-shadow-strong: rgba(0, 255, 255, 0.8); /* Сильная неоновая тень */
+    --color-link: #00eaff; /* Ссылки — холодный неон */
+    --color-link-hover: #ffffff; /* Белый при наведении */
+    --color-button: #00eaff; /* Кнопки — киберстиль */
+    --color-button-hover: #ffffff; /* Инверсия при наведении */
+    --color-button-text: #0a0a0a; /* Чёрный текст на неоновой кнопке */
+    --button-gradient-background: linear-gradient(
+        to right,
+        var(--color-black) 0%,
+        rgba(0, 0, 0, 0.8) 20%,
+        rgba(0, 0, 0, 0.3) 80%,
+        transparent 100%
+    );
+    --button-neon-shadow: -5px 0 10px -2px var(--color-shadow); /* Тень для кнопок */
+    --box-neon-shadow: 0 0 10px var(--color-shadow); /* Тень для блоков */
+}
+/* Отдельные классы для неонового стиля */
+.button-hover {
+    color: var(--color-white); /* Белый при наведении */
+    box-shadow: var(--button-neon-shadow);
+    background: var(--button-gradient-background);
+}
+
+.neon-border-bottom-2px {
+    border-bottom: 2px solid var(--color-accent); /* Добавляем рамку */
+    box-shadow: 0 0 30px var(--color-shadow);
+}
+.neon-border-2px {
+    border: 2px solid var(--color-accent); /* Добавляем рамку */
+    border-radius: 8px; /* Добавляем скругление */
+    box-shadow: 0 0 30px var(--color-shadow);
+}
+.neon-border-5px {
+    border: 5px solid var(--color-accent); /* Добавляем рамку */
+    border-radius: 20px; /* Добавляем скругление */
+    box-shadow: 0 0 30px var(--color-shadow);
+}
+
+.box-shadow {
+    box-shadow: 0 2px 5px var(--color-shadow);
+}
+
+.dark-shine {
+    color: var(--color-white); /* Белый при наведении */
+    background: var(--button-shine-background);
+    box-shadow: -5px 0 10px -2px var(--color-shadow);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ОБЩИЕ СТИЛИ */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-primary);
+    /* color: var(--color-text); */
+    background-image: url("Digitalyty-logo-3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фиксированное фоновое изображение */
+}
+
+/* Main reusable classes styles */
+
+/* HEADER */
+.header {
+    background-color: var(--color-black);
+    height: fit-content;
+    box-shadow: 0 2px 5px var(--color-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 25;
+    /* overflow: hidden; */
+}
+.header__container {
+    position: relative;
+    z-index: 1; /* чтобы контент был поверх видео */
+    text-align: center;
+    padding: 2rem;
+}
+.header__bg-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none; /* чтобы видео не мешало кликам по контенту */
+}
+.main-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+    background-color: var(--color-dark);
+    box-shadow: 0 2px 5px var(--color-shadow-strong);
+    z-index: 1000;
+}
+
+.nav__logo {
+    flex: 0 0 150px; /* Фиксированная ширина для логотипа */
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-black);
+    padding: 0.2rem;
+}
+
+.nav__logo img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+.nav__menu-link {
+    flex: 1;
+    border-left: #00eaff 1px solid;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: var(--color-link);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: var(--button-shine-background);
+}
+
+.nav__menu-link:hover {
+    color: var(--color-white); /* Белый при наведении */
+    box-shadow: var(--button-neon-shadow);
+    background: var(--button-gradient-background);
+}
+
+/* HERO */
+.header__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header__logo {
+    height: 100%;
+    width: auto;
+    position: relative;
+    z-index: 23; /* чтобы логотип был поверх видео */
+    background-color: transparent;
+}
+.hero {
+    position: relative;
+    z-index: 21;
+    text-align: center;
+    background: transparent;
+    background-color: var(--color-dark);
+}
+
+.hero__title {
+    font-size: 3rem;
+    /* color: var(--color-accent); */
+    margin: 0;
+    background-color: transparent;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    /* margin-top: 1rem; */
+}
+
+/* PROJECTS */
+.projects {
+    position: relative;
+    z-index: 20;
+    padding: 3rem 2rem;
+    background-color: var(--color-dark);
+}
+
+.projects__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    /* color: var(--color-white); */
+}
+
+.projects__list {
+    display: grid;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--color-deep-dark);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px var(--color-shadow-strong);
+    border-bottom: var(--border);
+}
+
+.project-card__title {
+    font-size: 1.3rem;
+    /* color: var(--color-white); */
+}
+
+.project-card__description {
+    font-size: 1rem;
+    /* color: var(--color-accent); */
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+/* OPTIONAL: BUTTON STYLE */
+.button {
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--color-button-hover);
+    color: var(--color-primary);
+}
+/* ADVANTAGES */
+.advantages {
+    position: relative;
+    z-index: 19;
+    background-color: var(--color-primary);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.advantages__title {
+    font-size: 2rem;
+    /* color: var(--color-white); */
+    margin-bottom: 2rem;
+}
+
+.advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.advantages__item {
+    background-color: var(--color-dark);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--color-shadow);
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    position: relative;
+    z-index: 18;
+    background-color: var(--color-dark);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.testimonials__title {
+    font-size: 2rem;
+    /* color: var(--color-white); */
+    margin-bottom: 2rem;
+}
+
+.testimonials__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: var(--color-deep-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--color-shadow);
+}
+
+.testimonial__text {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial__author {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+/* SERVICES */
+.services {
+    position: relative;
+    z-index: 17;
+    background-color: var(--color-primary);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.services__title {
+    font-size: 2rem;
+    /* color: var(--color-white); */
+    margin-bottom: 2rem;
+}
+
+.services__list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services__item {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    padding: 0.5rem 0;
+}
+
+/* PROCESS */
+.process {
+    position: relative;
+
+    background-color: var(--color-dark);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.process__title {
+    font-size: 2rem;
+    /* color: var(--color-white); */
+    margin-bottom: 2rem;
+}
+
+.process__steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.process__step {
+    position: relative;
+    margin-bottom: 1.2rem;
+    padding-right: 2rem;
+    color: var(--color-accent);
+    font-size: 1.1rem;
+}
+
+.process__step::before {
+    counter-increment: step;
+    content: counter(step) ".";
+    position: absolute;
+    right: 0;
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+/* CONTACT */
+.contact {
+    background-color: var(--color-primary);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contact__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact__label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    text-align: start;
+}
+
+.contact__input,
+.contact__textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.contact__textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact__button {
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact__button:hover {
+    background-color: var(--color-button-hover);
+    color: var(--color-primary);
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    color: var(--color-accent);
+    text-shadow: 0 0 5px var(--color-black), 0 0 3px var(--color-black);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: 2rem;
+    color: var(--color-text);
+    text-shadow: 0 0 5px var(--color-accent), 0 0 3px var(--color-black);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--color-text);
+}
