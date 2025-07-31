@@ -1,0 +1,23 @@
+{
+    "name": "Digitalyty – חברה לבניית אתרים ודפי נחיתה לעסקים קטנים",
+    "short_name": "Digitalyty",
+    "description": "חברה לבניית אתרים מיוחדים, אתרי תדמית, דפי נחיתה וכרטיסי ביקור דיגיטליים – עם עיצוב ייחודי והתאמה מלאה לקידום בגוגל.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#38bdf8",
+    "orientation": "portrait",
+    "lang": "he",
+    "icons": [
+        {
+            "src": "/images/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

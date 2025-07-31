@@ -2,142 +2,682 @@
 <html lang="he" dir="rtl">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T8Q2CWMG');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Digitalyty — הסגנון הדיגיטלי שלך</title>
+    <!-- CSS AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- SEO Meta Tags: עוזרים לגוגל להבין את תוכן הדף -->
+    <meta name="description"
+        content="Digitalyty – חברה לבניית אתרים מיוחדים לעסקים קטנים ובינוניים. אתרים רספונסיביים, מעוצבים ומוכנים לקידום אורגני כבר מהיום הראשון.">
+    <meta name="keywords"
+        content="חברה לבניית אתרים, בניית אתרים מיוחדים, בניית אתרים לעסקים קטנים, דפי נחיתה, אתרי תדמית, קידום אתרים, SEO, עיצוב רספונסיבי, כרטיס ביקור דיגיטלי, Digitalyty">
+    <meta name="author" content="ולנטין אולייניק עבור Digitalyty – בניית אתרים לעסקים קטנים ובינוניים">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://digitalyty.com/" />
+
+    <!-- ✅ Open Graph Meta Tags: Превью в соцсетях -->
+    <meta property="og:title" content="Digitalyty | בניית אתרים מיוחדים לעסקים קטנים" />
+    <meta property="og:description"
+        content="חברה לבניית אתרים – אתרים מעוצבים, מהירים, מותאמים לקידום בגוגל ומוכנים ללקוחות מהיום הראשון." />
+
+    <meta property="og:image" content="https://digitalyty.com/images/digitalyty-mini.jpg" />
+    <meta property="og:url" content="https://digitalyty.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- ✅ Web App Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" type="application/manifest+json" />
+
+
+    <!-- ✅ Иконки для Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+
+    <!-- ✅ Иконка для iOS -->
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="images/favicon-48x48.png" type="image/png">
+
+    <!-- ✅ Structured Data (JSON-LD): עסק לבניית אתרים -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebDesignBusiness",
+      "name": "Digitalyty",
+      "url": "https://digitalyty.com/",
+      "image": "https://digitalyty.com/images/digitalyty-mini.jpg",
+      "description": "חברה לבניית אתרים מיוחדים לעסקים קטנים, אתרי תדמית ודפי נחיתה עם התאמה מלאה לקידום בגוגל, עיצוב רספונסיבי ונראות מרשימה.",
+      "telephone": "+972545811900",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Migdal HaEmek",
+        "addressRegion": "North District",
+        "addressCountry": "IL"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "ישראל"
+      },
+      "sameAs": [
+        "https://www.facebook.com/your-page",
+        "https://www.instagram.com/your-profile",
+        "https://wa.me/972545811900"
+      ]
+    }
+    </script>
+
+
+
+    <title>Digitalyty — בניית אתרי אינטרנט</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js" defer></script> //заменён и разделён -->
+    <script src="/js/nav.js" defer></script>
+    <script src="/js/form.js" defer></script>
+    <script src="/js/accessibility.js" defer></script>
+    <script src="/js/scrollTop.js" defer></script>
+    <script src="/js/service-worker-register.js" defer></script>
 </head>
 
 <body class="page">
-    <nav class="main-nav ">
-        <ul class="nav__menu">
-            <li class="nav__menu-item"><a href="#home" class="nav__menu-link">בית</a></li>
-            <li class="nav__menu-item"><a href="#projects" class="nav__menu-link">פרויקטים</a></li>
-            <li class="nav__menu-item"><a href="#about" class="nav__menu-link">עלינו</a></li>
-            <li class="nav__menu-item"><a href="#contact" class="nav__menu-link">צור קשר</a></li>
-        </ul>
-        <div class="nav__logo neon-border-2px"><img src="Digitelyty-logo-3.png" alt="לוגו Digitalyty" /></div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8Q2CWMG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    </nav>
-    <header class="header neon-border-bottom-2px">
+    <div id="site-wrapper">
+        <nav class="main-nav" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
 
-        <div class="header__container">
+            <button class="hamburger-menu-toggle" id="hamburger-toggle">
+                <span class="icon icon-hamburger">☰</span>
+                <span class="icon icon-close">✖</span>
+            </button>
 
-            <video class="header__bg-video neon-border-5px" autoplay loop muted playsinline>
-                <source src="Digitalyty2.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
-        </div>
-
-
-        <!-- <img src="Digitalyty-logo-2.png" alt="לוגו Digitalyty" class="header__logo" /> -->
-    </header>
-
-    <main class="main">
-        <section class="hero">
-            <div class="hero__container">
-                <h1 class="hero__title">דיגיטליטי</h1>
-                <h3 class="hero__subtitle">הסגנון הדיגיטלי שלך</h3>
+            <ul class="nav__menu" id="nav__menu">
+                <li class="nav__menu-item"><a href="#" class="nav__menu-link">מסך הבית</a></li>
+                <li class="nav__menu-item"><a href="#services" class="nav__menu-link">שירות</a></li>
+                <li class="nav__menu-item"><a href="#services-bottom-container" class="nav__menu-link">ערך מוסף</a></li>
+                <li class="nav__menu-item"><a href="#why-digitalyty" class="nav__menu-link">למה Digitalyty</a></li>
+                <li class="nav__menu-item"><a href="#contact" class="nav__menu-link">צור קשר</a></li>
+            </ul>
+            <div class="nav__logo-wrapper">
+                <div class="nav__logo neon-border-2px"><img src="Digitelyty-logo-3.png" alt="לוגו Digitalyty" /></div>
             </div>
-        </section>
+            <a href="tel:+972545811900" class="button" id="phone" aria-label="Phone">
+                <img src="icons/phone.svg" class="icon-phone" alt="Phone">054-5811900</a>
+        </nav>
+        <header class="header neon-border-bottom-2px" id="home" data-aos="fade-down">
 
-        <section class="projects box-shadow neon-border-bottom-2px" id="projects">
-            <div class="projects__container ">
-                <h2 class="projects__title">הפרויקטים שלנו</h2>
-                <div class="projects__list ">
-                    <!-- דוגמה לכרטיס פרויקט -->
-                    <article class="project-card ">
-                        <h3 class="project-card__title">שם הפרויקט</h3>
-                        <p class="project-card__description">תיאור קצר של הפרויקט.</p>
-                    </article>
+            <div class="header__container">
+                <section class="hero">
+                    <div class="hero__container">
+                        <h1 class="hero__title">בניית אתרים לעסקים</h1>
+
+
+
+                    </div>
+                </section>
+                <div class="header__video-wrapper">
+                    <video class="header__bg-video neon-border-5px" autoplay loop muted playsinline
+                        aria-label="לוגו מונפש של Digitalyty" poster="fon.jpg" preload="none">
+                        <source src="Digitalyty2-1.mp4" type="video/mp4">
+                        הדפדפן שלך לא תומך בווידאו.
+                    </video>
                 </div>
+                <h2 class="hero__subtitle">
+                    <span class="highlight">Digitalyty</span> – חברה לבניית אתרים מיוחדים עם מיתוג מנצח
+                    ותוצאות מוכחות
+                </h2>
             </div>
-        </section>
-        <!-- יתרונות -->
-        <section class="advantages neon-border-bottom-2px">
-            <div class="advantages__container">
-                <h2 class="advantages__title">למה לבחור בי?</h2>
-                <ul class="advantages__list">
-                    <li class="advantages__item">מהיר ויעיל</li>
-                    <li class="advantages__item">עיצוב רספונסיבי</li>
-                    <li class="advantages__item">קידום אתרים וליווי</li>
-                </ul>
+
+        </header>
+
+        <main class="main">
+
+            <!-- עליי בכללי -->
+            <section class="about out__container-white df-column black-border-bottom-2px" id="about" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+                <h2 class="about__title gradient-title" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    Digitalyty – חברה לבניית אתרים מיוחדים לעסקים
+                </h2>
+                <div class="about__container inner-container-transparent" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
+                    <div class="df-column about__inner-container">
+
+
+                        <p class="about__description">
+                            היום, עסק בלי אתר – פשוט מפספס לקוחות.
+                            הלקוחות שלך מחפשים אותך בגוגל – והם מצפים למצוא אותך בקלות, עם אתר מקצועי, ברור ומתאים לכל
+                            סוגי המכשירים.<br>
+                            אתר שלא מופיע בתוצאות החיפוש, או כזה שלא נטען טוב בנייד – פשוט גורם להם לעבור למתחרים.
+                        </p>
+
+                        <p class="about__description description3" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            בסופו של דבר, אתה מקבל אתר שנראה מעולה, עובד חלק, ומקבל חשיפה אמיתית בגוגל –<br>
+                            בלי לשלם כל חודש על קידום ממומן.
+                        </p>
+
+                        <ul class="about__list" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <li>✔️ טעינה מהירה שמקדמת אותך בגוגל ומשפרת חוויית משתמש</li>
+                            <li>✔️ מבנה נכון למנועי חיפוש – עם קוד נקי והיררכיה ברורה</li>
+                            <li>✔️ התאמה מלאה למובייל – כי רוב הכניסות מגיעות מהטלפון</li>
+                            <li>✔️ כתיבה נכונה ומדויקת שמדברת גם ללקוחות וגם לאלגוריתם</li>
+                            <li>✔️ מוכנות מלאה לקידום אורגני – כבר מהרגע הראשון</li>
+                        </ul>
+
+
+                        <p class="about__description description3" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            בסופו של דבר, אתה מקבל אתר שנראה מעולה, עובד חלק, </strong>ומקבל חשיפה אמיתית בגוגל<strong>
+                                –<br>
+                                בלי לשלם כל חודש על קידום ממומן.
+                        </p>
+                    </div>
+
+                    <video class="about__container-video neon-border-5px" autoplay loop muted playsinline
+                        aria-label="לוגו מונפש של Digitalyty">
+                        <source src="hero-logo-digitalyty.mp4" type="video/mp4">
+                        הדפדפן שלך לא תומך בווידאו.
+                    </video>
+
+                </div>
+            </section>
+
+
+
+            <section class="services out__container-accent df-column black-border-bottom-2px" id="services"
+                data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h2 class="services__title">
+                    אז מה עושים ב - <span class="highlight-black">Digitalyty</span> ?
+                </h2>
+
+                <div class="services__inner-container-top inner-container-transparent df-column">
+                    <h3 class="services__title-h3"> בונים אתרים מיוחדים</h3>
+                    <div class="services__list services__list1 gap-space">
+
+                        <!-- שירותים -->
+                        <article class="services-card card-flex-white-column gap-space" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="services__card-top">
+                                <img src="images/desktop.png" alt="אייקון אתר תדמית מקצועי על מסך מחשב" width="100"
+                                    height="100">
+                            </div>
+                            <div class="services_card-bottom" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                <h3 class="services-card__title">בניית אתרי תדמית</h3>
+                                <p class="services-card__description">
+                                    אתרים מקצועיים ומעוצבים לעסקים – עם קידום אורגני, התאמה לנייד ומהירות טעינה גבוהה.
+                                    מושלם
+                                    לעסק שרוצה נוכחות
+                                    דיגיטלית מרשימה.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="services-card card-flex-white-column gap-space" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="services__card-top">
+                                <img src="images/landing-page.png" alt="אייקון דף נחיתה עם טופס וקריאה לפעולה"
+                                    width="100" height="100">
+                            </div>
+                            <div class="services_card-bottom">
+                                <h3 class="services-card__title">דפי נחיתה ממירים</h3>
+                                <p class="services-card__description">
+                                    דפי נחיתה ממוקדים שמביאים לקוחות חדשים – עם קריאה לפעולה, טפסים חכמים ועיצוב שמוביל
+                                    לתוצאות.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="services-card card-flex-white-column gap-space" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="services__card-top">
+                                <img src="images/portfolio.png" alt="אייקון דף נחיתה עם טופס וקריאה לפעולה" width="100"
+                                    height="100">
+                            </div>
+                            <div class="services_card-bottom">
+                                <h3 class="services-card__title"> בניית אתרי פורטפוליו </h3>
+                                <p class="services-card__description">
+                                    מציגים את הכישרון שלך בצורה מרשימה – אתרים ויזואליים שמתמקדים בעבודות, עם ניווט נוח,
+                                    טעינה מהירה ועיצוב שמשאיר רושם.
+                                </p>
+                            </div>
+                        </article>
+
+
+                        <article class="services-card card-flex-white-column gap-space" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="services__card-top">
+                                <img src="images/marriage3.png" alt="אייקון דף נחיתה עם טופס וקריאה לפעולה" width="100"
+                                    height="100">
+                            </div>
+                            <div class="services_card-bottom">
+                                <h3 class="services-card__title"> בניית אתרי אירועים</h3>
+                                <p class="services-card__description">
+                                    לחתונה, בר מצווה או כל אירוע מרגש – אתר אישי עם כל המידע החשוב, טופס אישור הגעה,
+                                    מיקום
+                                    וגלריית תמונות שתישאר למזכרת.
+
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="services__inner-container-bottom inner-container-transparent df-column"
+                    id="services-bottom-container" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <h3 class="services__title-h3-top">
+                        <span class="highlight">Digitalyty</span> - נותנים ערך מוסף
+                    </h3>
+                    <div class="services__list services__list2 gap-space">
+                        <article class="services-card card-flex-white-column gap-space">
+                            <div class="services__card-top">
+                                <img src="images/responsive.png"
+                                    alt="אייקון עיצוב רספונסיבי במסכים שונים – נייד, טאבלט ודסקטופ" width="100"
+                                    height="100">
+                            </div>
+                            <div class="services__card-bottom">
+                                <h3 class="services-card__title">עיצוב רספונסיבי</h3>
+                                <p class="services-card__description">
+                                    התאמה מלאה לכל סוגי המסכים – מחשבים, טאבלטים וניידים. חוויית משתמש חלקה שגורמת
+                                    לגולשים
+                                    להישאר באתר שלך.
+                                </p>
+                            </div>
+                        </article>
+
+
+                        <article class="services-card card-flex-white-column gap-space" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="services__card-top">
+                                <img src="images/seo.png" alt="אייקון SEO עם גרף עלייה ומנוע חיפוש" width="100"
+                                    height="100">
+                            </div>
+                            <div class="services_card-bottom">
+                                <h3 class="services-card__title">אופטימיזציה ל־SEO</h3>
+                                <p class="services-card__description">
+                                    כל אתר נבנה עם קוד נקי, היררכיה נכונה ותגיות מתאימות – כדי שגוגל יאהב את האתר שלך
+                                    מהשנייה
+                                    הראשונה.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="services-card card-flex-white-column gap-space" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="services__card-top">
+                                <img src="images/digital-globe.png" alt="אייקון חיבור דומיין וכתובת אימייל עסקית"
+                                    width="100" height="100">
+                            </div>
+                            <div class="services_card-bottom">
+                                <h3 class="services-card__title">חיבור לדומיין ודוא"ל</h3>
+                                <p class="services-card__description">
+                                    נבצע עבורך חיבור מלא לדומיין וכתובת מייל מקצועית – כדי שהמותג שלך ייראה אמין ובשל.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="services-card card-flex-white-column gap-space" data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="services__card-top">
+                                <img src="images/customer-support.png" alt="אייקון תמיכת לקוחות עם אוזניות ושירות אישי"
+                                    width="100" height="100">
+                            </div>
+                            <div class="services_card-bottom">
+                                <h3 class="services-card__title">תמיכה וליווי שוטף</h3>
+                                <p class="services-card__description">
+                                    גם אחרי שהאתר באוויר – אני איתך. תחזוקה, עדכונים ותמיכה אישית כדי שהכל ימשיך לעבוד
+                                    חלק.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- יתרונות -->
+            <section class="advantages out__container-white black-border-bottom-2px" id="why-digitalyty"
+                data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="advantages__container neon-border-2px df-column">
+                    <h2 class="advantages__title gradient-title">
+                        למה לבנות אתר עם Digitalyty?
+                    </h2>
+
+                    <div class="advantages__inner-container df-row gap-space">
+                        <div class="advantages__img-box neon-border-5px">
+                            <img src="images/digitalyty-choose.png" alt="לוגו Digitalyty – בניית אתרים ודפי נחיתה">
+                        </div>
+
+                        <ul class="advantages__list df-column">
+
+                            <li class="advantages__item df-column" data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom">
+                                <img src="icons/1.svg" alt="אייקון מהירות ויעילות" width="50" height="50">
+                                <h3>עיצוב חכם שמביא תוצאות</h3>
+                                <p>
+                                    ב-Digitalyty אנחנו לא רק בונים אתרים – אנחנו עוזרים לעסקים לצמוח בדיגיטל. כל אתר
+                                    נבנה במבנה מדויק, עם קריאות לפעולה
+                                    חכמות ותוכן שממיר. זו לא רק <strong>בניית אתרים</strong> – זו חשיבה שיווקית מהשלב
+                                    הראשון.
+                                </p>
+
+                            </li>
+
+                            <li class="advantages__item df-column" data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom">
+                                <img src="icons/2.svg" alt="אייקון רספונסיביות" width="50" height="50">
+                                <h3>נראות מדויקת בכל מסך</h3>
+                                <p>
+                                    האתר שלך מותאם לכל סוגי המסכים – מטלפון ועד מחשב. היום זה לא מותרות, זו חובה.
+                                    במיוחד כשמדובר על <strong>בניית אתרים לעסקים קטנים</strong> שמחפשים רושם חזק כבר
+                                    מהקליק הראשון.
+                                </p>
+                            </li>
+
+                            <li class="advantages__item df-column" data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom">
+                                <img src="icons/3.svg" alt="אייקון קידום אתרים" width="50" height="50">
+                                <h3>SEO כבר בפנים</h3>
+                                <p>
+                                    האתר שלך מוכן לקידום אורגני כבר מהרגע הראשון – עם קוד תקני, היררכיה נכונה וטעינה
+                                    מהירה.
+                                    זהו הבסיס לכל תהליך נכון של <strong>בניית וקידום אתרים</strong>.
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- המלצות -->
+            <section class="testimonials black-border-bottom-2px" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+                <div class="testimonials__container">
+                    <h2 class="testimonials__title">לקוחות מספרים על חוויית בניית האתר עם Digitalyty</h2>
+
+                    <ul class="testimonials__list">
+
+                        <li class="testimonial" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="testimonial__icon">
+                                <img src="google-g.svg" alt="Google G icon">
+                            </div>
+                            <p class="testimonial__text">
+                                "אתר מדהים תוך זמן קצר! בדיוק מה שחיפשתי לעסק הקטן שלי. ממליצה לכל מי שצריך אתר איכותי."
+                            </p>
+                            <div class="testimonial__stars" aria-label="5 כוכבים">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial__author">— מיכל לוי</p>
+                        </li>
+
+                        <li class="testimonial" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="testimonial__icon">
+                                <img src="google-g.svg" alt="Google G icon">
+                            </div>
+                            <p class="testimonial__text">
+                                "מקצועי, מהיר ואמין. קיבלתי אתר רספונסיבי שנבנה בצורה נכונה לקידום אורגני – בדיוק כמו
+                                שצריך."
+                            </p>
+                            <div class="testimonial__stars" aria-label="5 כוכבים">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial__author">— יוסי כהן</p>
+                        </li>
+
+                        <li class="testimonial" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="testimonial__icon">
+                                <img src="google-g.svg" alt="Google G icon">
+                            </div>
+                            <p class="testimonial__text">
+                                "השירות היה מעל ומעבר. האתר נראה מדהים, מהיר וכולל דף נחיתה ממוקד שמייצר פניות כל יום."
+                            </p>
+                            <div class="testimonial__stars" aria-label="5 כוכבים">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial__author">— דנה רוזן</p>
+                        </li>
+
+                        <li class="testimonial" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="testimonial__icon">
+                                <img src="google-g.svg" alt="Google G icon">
+                            </div>
+                            <p class="testimonial__text">
+                                "לא ציפיתי לכזה אתר איכותי בזמן כל כך קצר. ממש שירות של חברה לבניית אתרים מיוחדים!"
+                            </p>
+                            <div class="testimonial__stars" aria-label="5 כוכבים">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial__author">— אריאל שמש</p>
+                        </li>
+
+                        <li class="testimonial" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="testimonial__icon">
+                                <img src="google-g.svg" alt="Google G icon">
+                            </div>
+                            <p class="testimonial__text">
+                                "חוויה מקצועית מהשיחה הראשונה ועד האתר המוכן. כל פרט טופל בדייקנות. אתר שמביא תוצאות!"
+                            </p>
+                            <div class="testimonial__stars" aria-label="5 כוכבים">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial__author">— רונית גבע</p>
+                        </li>
+
+                        <li class="testimonial" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="testimonial__icon">
+                                <img src="google-g.svg" alt="Google G icon">
+                            </div>
+                            <p class="testimonial__text">
+                                "קיבלתי בדיוק מה שרציתי – אתר מודרני, נגיש, מוכן ל-SEO ומתאים לעסק קטן שמתחיל לגדול."
+                            </p>
+                            <div class="testimonial__stars" aria-label="5 כוכבים">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial__author">— אבי ברק</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+
+
+
+
+            <section class="process" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h2 class="process__title">אז איך מתחילים?</h2>
+
+                <div class="process__flex">
+
+                    <div class="process__card" data-aos="fade-up">
+                        <div class="process__icon">
+                            <img src="icons/1-steps.svg" alt="צור קשר">
+                        </div>
+                        <h3 class="process__step-title">יוצרים קשר</h3>
+                        <p class="process__text">
+                            זה מתחיל ממש בקלות – שולחים לנו הודעה בוואטסאפ, מייל או שיחת טלפון, ואנחנו חוזרים אליכם תוך
+                            כמה שעות.
+                            נפתח בשיחת ייעוץ קצרה (ללא התחייבות) כדי להבין אם אתם צריכים <strong>אתר תדמית
+                                מקצועי</strong>,
+                            <strong>דף נחיתה ממוקד</strong> או <strong>אתר לעסק קטן</strong>.
+                        </p>
+                    </div>
+
+                    <div class="process__card" data-aos="fade-up">
+                        <div class="process__icon">
+                            <img src="icons/2-steps.svg" alt="הצעת מחיר">
+                        </div>
+                        <h3 class="process__step-title">מקבלים הצעת מחיר מסודרת</h3>
+                        <p class="process__text">
+                            אחרי שהבנו את הצרכים שלכם, נכין הצעת מחיר ברורה עם כל מה שצריך לדעת: מה האתר כולל, כמה זמן
+                            זה ייקח, וכמה
+                            זה יעלה.
+                            הכל כלול – <strong>עיצוב אתרים</strong>, <strong>בניית אתרים רספונסיביים</strong>
+                            ו<strong>התאמה מלאה
+                                לקידום אורגני</strong>.
+                        </p>
+                    </div>
+
+                    <div class="process__card" data-aos="fade-up">
+                        <div class="process__icon">
+                            <img src="icons/3-steps.svg" alt="שיחת אפיון">
+                        </div>
+                        <h3 class="process__step-title">שיחת אפיון מדויקת</h3>
+                        <p class="process__text">
+                            כאן אנחנו נכנסים לפרטים הקטנים – מה חשוב שיהיה באתר, מי הקהל שלכם ואיזה מסר אתם רוצים
+                            להעביר.
+                            נאפיין את מבנה האתר לפי מטרות העסק, כולל התאמה ל-<strong>SEO</strong> והעדפות עיצוב.
+                        </p>
+                    </div>
+
+                    <div class="process__card" data-aos="fade-up">
+                        <div class="process__icon">
+                            <img src="icons/4-steps.svg" alt="עיצוב ובנייה">
+                        </div>
+                        <h3 class="process__step-title">עיצוב ובניית האתר</h3>
+                        <p class="process__text">
+                            מתחילים ליצור <strong>אתר רספונסיבי ומעוצב</strong> שמתאים לצבעים, לערכים ולמטרות של העסק
+                            שלכם.
+                            אנחנו דואגים שהוא ייראה מקצועי, יטען מהר ויהיה מוכן להופיע בגוגל מהיום הראשון.
+                        </p>
+                    </div>
+
+                    <div class="process__card" data-aos="fade-up">
+                        <div class="process__icon">
+                            <img src="icons/5-steps.svg" alt="בדיקות איכות">
+                        </div>
+                        <h3 class="process__step-title">בדיקות לפני עלייה</h3>
+                        <p class="process__text">
+                            בודקים שהכל עובד: מהירות טעינה, התאמה למובייל, טפסים, קישורים ותצוגה בדפדפנים שונים.
+                            כל אתר עובר בקרת איכות לפני שמעלים אותו לאוויר.
+                        </p>
+                    </div>
+
+                    <div class="process__card" data-aos="fade-up">
+                        <div class="process__icon">
+                            <img src="icons/6-steps.svg" alt="עלייה לאוויר">
+                        </div>
+                        <h3 class="process__step-title">האתר שלכם באוויר!</h3>
+                        <p class="process__text">
+                            מחברים את האתר לדומיין, מספקים גישה מלאה והדרכה קצרה. עכשיו יש לכם <strong>אתר עסקי
+                                מקצועי</strong>,
+                            שנראה מצוין בכל מכשיר ומוכן למשוך לקוחות מהחיפוש בגוגל.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- צור קשר -->
+            <section class="contact" id="contact" data-aos="fade-up" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                <div class="contact__container">
+                    <h2 class="contact__title">צור קשר</h2>
+
+                    <!-- Форма Netlify -->
+                    <form class="contact__form" name="contact" method="POST" data-netlify="true"
+                        netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+
+                        <!-- антиспам поле (скрыто) -->
+                        <input type="hidden" name="bot-field">
+
+                        <label class="contact__label">
+                            שם:
+                            <input type="text" name="name" class="contact__input" required>
+                        </label>
+
+                        <label class="contact__label">
+                            טלפון:
+                            <input type="tel" name="phone" class="contact__input" required>
+                        </label>
+
+                        <label class="contact__label">
+                            הודעה:
+                            <textarea name="message" class="contact__textarea" required></textarea>
+                        </label>
+
+                        <button type="submit" class="button">שלח</button>
+
+                        <!-- Блок с сообщением -->
+                        <div id="form-message">
+                            !תודה, הפנייה נשלחה בהצלחה
+                        </div>
+                    </form>
+
+                </div>
+            </section>
+
+
+
+        </main>
+        <a href="#" id="scrollToTop" class="scroll-to-top">⬆</a>
+        <a href="tel:+972545811900" aria-label="Phone" class="call-button" id="phone-fixed">
+            <img src="icons/social-icons/phone.svg" alt="Phone" width="32" height="32">
+        </a>
+        <a href="https://wa.link/d8lk9t" aria-label="שלח הודעה בוואטסאפ" class="whatsApp-button" id="whatsApp-fixed">
+            <img src="icons/social-icons/whatsApp.svg" alt="WhatsApp" width="32" height="32">
+        </a>
+
+        <footer class="footer">
+            <div class="social">
+                <a href="https://www.facebook.com/Digitalyty/" target="_blank" aria-label="Facebook"
+                    class="facebok-button">
+                    <img src="icons/facebook.svg" alt="Facebook" width="32" height="32">
+                </a>
+                <a href="mailto:digitalyty.web@gmail.com" aria-label="Email" class="email-button">
+                    <img src="icons/mail.svg" class="email-button" alt="Email" width="32" height="32">
+                </a>
+                <a href="tel:+972545811900" aria-label="Phone" class="call-button">
+                    <img src="icons/phone.svg" alt="Phone" width="32" height="32">
+                </a>
             </div>
-        </section>
-
-        <!-- המלצות -->
-        <section class="testimonials neon-border-bottom-2px">
-            <div class="testimonials__container">
-                <h2 class="testimonials__title">מה הלקוחות אומרים</h2>
-                <ul class="testimonials__list">
-                    <li class="testimonial">
-                        <p class="testimonial__text">"אתר מדהים תוך זמן קצר!"</p>
-                        <p class="testimonial__author">— מיכל לוי</p>
-                    </li>
-                    <li class="testimonial">
-                        <p class="testimonial__text">"מקצועי, מהיר ואמין. ממליץ בחום."</p>
-                        <p class="testimonial__author">— יוסי כהן</p>
-                    </li>
-                </ul>
+            <div class="footer__container">
+                <p>כל הזכויות שמורות © 2025</p>
+                <a href="sitemap.html">מפת אתר</a> |
+                <a href="terms.html">תנאי שימוש</a> |
+                <a href="privacy.html">מדיניות פרטיות</a> |
+                <a href="accessibility.html">הצהרת נגישות</a>
+                <p class="footer__author-ref">
+                    האתר נבנה באהבה על ידי <a id="author-ref" href="https://digitalyty.com" target="_blank"
+                        rel="noopener noreferrer">Digitalyty</a></p>
             </div>
-        </section>
+        </footer>
 
-        <!-- שירותים -->
-        <section class="services neon-border-bottom-2px">
-            <div class="services__container">
-                <h2 class="services__title">השירותים שלי</h2>
-                <ul class="services__list">
-                    <li class="services__item">דף נחיתה</li>
-                    <li class="services__item">אתר תדמיתי</li>
-                    <li class="services__item">חנות אונליין</li>
-                    <li class="services__item">קידום אתרים (SEO)</li>
-                </ul>
+        <!-- Accessibility Widget HTML (WCAG 2.0 AA Enhanced + Extended + Keyboard Nav + Screen Reader Support) -->
+
+        <div id="accessibility-widget" class="accessibility-widget">
+
+            <button id="accessibility-toggle" aria-label="פתח תפריט נגישות" aria-expanded="false"
+                aria-controls="accessibility-menu">♿</button>
+            <div id="accessibility-menu" class="accessibility-menu" role="region" aria-label="תפריט נגישות">
+                <button onclick="increaseFontSize()" tabindex="0"> הגדל טקסט</button>
+                <button onclick="decreaseFontSize()" tabindex="0"> הקטן טקסט</button>
+                <button onclick="toggleContrast()" tabindex="0"> ניגודיות גבוהה</button>
+                <button onclick="highlightLinks()" tabindex="0"> הדגש קישורים</button>
+                <button onclick="toggleAnimations()" tabindex="0"> בטל אנימציות</button>
+                <button onclick="underlineLinks()" tabindex="0"> קו תחתון לקישורים</button>
+                <button onclick="underlineHeadings()" tabindex="0"> קו תחתון לכותרות</button>
+                <button onclick="resetAccessibility()" tabindex="0"> איפוס</button>
             </div>
-        </section>
-
-        <!-- שלבי עבודה -->
-        <section class="process neon-border-bottom-2px">
-            <div class="process__container">
-                <h2 class="process__title">איך זה עובד?</h2>
-                <ol class="process__steps">
-                    <li class="process__step">היכרות ובריף</li>
-                    <li class="process__step">עיצוב ומבנה</li>
-                    <li class="process__step">פיתוח</li>
-                    <li class="process__step">השקה ותמיכה</li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- צור קשר -->
-        <section class="contact" id="contact">
-            <div class="contact__container">
-                <h2 class="contact__title">צור קשר</h2>
-                <form class="contact__form">
-                    <label class="contact__label">
-                        שם:
-                        <input type="text" name="name" class="contact__input" required>
-                    </label>
-                    <label class="contact__label">
-                        טלפון:
-                        <input type="tel" name="phone" class="contact__input" required>
-                    </label>
-                    <label class="contact__label">
-                        הודעה:
-                        <textarea name="message" class="contact__textarea" required></textarea>
-                    </label>
-                    <button type="submit" class="contact__button">שלח</button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="footer__container">
-            <p class="footer__text">© 2025 Digitalyty. כל הזכויות שמורות.</p>
         </div>
-    </footer>
+
+        <!-- Подключаем JS AOS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+        <!-- Инициализируем AOS -->
+        <script>
+            AOS.init({
+                delay: 100,
+                duration: 1500,  // длительность анимации (в миллисекундах)
+                once: true      // анимация повторяется при каждом появлении
+            });
+        </script>
+    </div>
 </body>
 
 </html>
