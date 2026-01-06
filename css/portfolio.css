@@ -1,0 +1,256 @@
+:root {
+    --gap: 24px;
+    --screen-radius: 14px;
+    --frame-color: #0f1216;
+    --bezel: 10px;
+    --phone-bezel-h: 8px;
+    --phone-bezel-v: 18px;
+    --return-ms: 900ms;
+    --shadow: 0 6px 28px rgba(0, 0, 0, 0.25);
+    --bg: #0b0d11;
+    --card: #11151b;
+    --text: #e8eef7;
+    --muted: #9aa8bc;
+}
+
+.out__container-white {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #f5f7fb;
+        --card: #fff;
+        --text: #0e1420;
+        --muted: #556277;
+        --frame-color: #151a23;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.inner-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.sub {
+    margin: 0 0 24px;
+    color: var(--muted);
+}
+
+.devices--wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    flex: 1 1 500px;
+    background: var(--color-white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 16px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+/* === FLEX במקום GRID === */
+.devices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 500px;
+    gap: var(--gap);
+    align-items: flex-start;
+}
+
+/* העמודה של הדסקטופ נמתחת */
+.device--desktop {
+    flex: 1 1 300px;
+    min-width: 0;
+    background: none !important;
+}
+
+/* העמודה של המובייל ברוחב קבוע */
+.device--phone {
+    flex: 0 0 200px;
+    max-width: 340px;
+}
+
+@media (max-width: 900px) {
+    .devices {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .device--phone {
+        flex: 1 1 auto;
+        max-width: 60%;
+    }
+
+    .inner-wrap {
+        flex-direction: column;
+    }
+}
+
+.device {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    background: var(--card);
+    border-radius: 18px;
+}
+
+.device__label {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* מסגרת מסך דסקטופ */
+.device--desktop .frame {
+    border: 3px solid #000;
+    border-radius: calc(var(--screen-radius) + var(--bezel));
+    padding: var(--bezel);
+    position: relative;
+}
+
+.device--desktop .stand {
+    width: 36%;
+    height: 8px;
+    margin: 10px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #c9d1db, #9aa8bc);
+    opacity: 0.6;
+}
+
+/* מסגרת טלפון */
+.device--phone .frame {
+    background: var(--frame-color);
+    border-radius: 28px;
+    padding: var(--phone-bezel-v) var(--phone-bezel-h);
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+}
+
+.device--phone .notch {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 6px;
+    border-radius: 999px;
+    background: #2a303b;
+    opacity: 0.8;
+}
+
+/* אזור התצוגה */
+.screen {
+    border-radius: var(--screen-radius);
+    overflow: hidden;
+    background: #090c12;
+    position: relative;
+    isolation: isolate;
+}
+
+.device--desktop .screen {
+    aspect-ratio: 16 / 10;
+}
+
+.device--phone .screen {
+    aspect-ratio: 9 / 19.5;
+}
+
+/* תוכן ארוך שמתגלל */
+.screen__content {
+    width: 100%;
+    height: auto;
+    display: block;
+    will-change: transform;
+    transform: translateY(0);
+    transition: transform var(--return-ms) cubic-bezier(0.2, 0.7, 0.2, 1);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* טיפ */
+.hint {
+    position: absolute;
+    inset: auto 10px 10px auto;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+    opacity: 0.85;
+}
+
+.services-title {
+    margin: 2rem;
+}
+
+/* CTA full-width + отступы */
+.cta-row {
+    width: 100%;
+    margin-top: 16px;
+}
+.button--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* необязательно: усиленный вид для основного CTA */
+.button--primary {
+    background: linear-gradient(90deg, var(--toc-accent, #00e6ff), #8b5cf6);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+.button--primary:hover,
+.button--primary:focus {
+    filter: brightness(1.02);
+    transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .screen__content {
+        transition: none !important;
+    }
+
+    [data-auto-scroll] {
+        pointer-events: none;
+    }
+}

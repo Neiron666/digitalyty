@@ -1,4 +1,4 @@
-const CACHE_NAME = "digitalyty-v1";
+const CACHE_NAME = "digitalyty-v2"; // Меняй при каждом обновлении!
 const CACHE_ASSETS = [
     "/",
     "/index.html",
@@ -80,13 +80,13 @@ const CACHE_ASSETS = [
     "/icons/social-icons/phone.svg",
     "/icons/social-icons/whatsApp.svg",
 
-    // Animations (если используешь)
+    // Animations
     "/animations/Analytics Character Animation.json",
     "/animations/Analytics Character Animation.lottie",
     "/animations/code dark.json",
 ];
 
-// Установка: кешируем указанные ресурсы
+// Установка — кешируем заранее
 self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHE_ASSETS))
@@ -94,36 +94,32 @@ self.addEventListener("install", (event) => {
     self.skipWaiting();
 });
 
-// Активация: удаляем устаревшие кэши
+// Активация — удаляем старые кеши
 self.addEventListener("activate", (event) => {
     event.waitUntil(
-        caches
-            .keys()
-            .then((cacheNames) =>
-                Promise.all(
-                    cacheNames
-                        .filter((name) => name !== CACHE_NAME)
-                        .map((name) => caches.delete(name))
-                )
-            )
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames
+                    .filter((name) => name !== CACHE_NAME)
+                    .map((name) => caches.delete(name))
+            );
+        })
     );
     self.clients.claim();
 });
 
-// Перехват запросов: кеш first, потом сеть
+// Запросы — стратегия: Network First
 self.addEventListener("fetch", (event) => {
     if (event.request.method !== "GET") return;
 
     event.respondWith(
-        caches.match(event.request).then((cached) => {
-            return (
-                cached ||
-                fetch(event.request).catch(
-                    () =>
-                        caches.match("/offline.html") ||
-                        new Response("Offline", { status: 503 })
-                )
-            );
-        })
+        fetch(event.request)
+            .then((response) => {
+                return caches.open(CACHE_NAME).then((cache) => {
+                    cache.put(event.request, response.clone());
+                    return response;
+                });
+            })
+            .catch(() => caches.match(event.request))
     );
 });

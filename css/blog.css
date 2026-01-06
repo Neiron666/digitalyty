@@ -1,0 +1,181 @@
+/* ===== Блог: использует переменные проекта ===== */
+/* Отступ для плавного скролла с учётом фиксированного хедера */
+[id] {
+    scroll-margin-top: 130px; /* подбери значение под реальную высоту хедера */
+}
+/* ===== Хедер блога ===== */
+
+.header--blog {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(10, 12, 14, 0.95) 100%
+    );
+    background-image: url("../images/blog-header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.header--blog::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* затемнение */
+    z-index: 1;
+}
+
+.header__container--blog {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.header--blog .hero__container {
+    position: relative;
+    z-index: 2; /* чтобы текст был поверх */
+    text-align: center;
+    color: var(--color-white);
+}
+
+.header--blog img {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* Контейнер страницы */
+.blog {
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-primary);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.blog__title {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #00eaff, #0f172a);
+    color: #fff;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1rem;
+}
+
+.blog__intro {
+    max-width: 780px;
+    margin: 0 auto 2rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* Сетка карточек */
+.blog__flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Карточка: одинаковая высота у всех */
+.blog-card {
+    --card-h: 450px; /* общая высота карточки */
+    height: var(--card-h);
+    max-height: fit-content;
+    width: 500px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column; /* медиа сверху, тело снизу */
+    background: var(--color-white);
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(84, 199, 253, 0.35);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px var(--color-shadow);
+}
+
+/* кликабельная область — вся карточка */
+.blog-card__link {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Верх: картинка = 40% высоты */
+.blog-card__media {
+    flex: 0 0 50%;
+    position: relative;
+    background: #0b0f14;
+}
+.blog-card__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Низ: контент = 60% высоты */
+.blog-card__body {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.9rem 1rem;
+    text-align: right; /* RTL */
+    color: var(--color-white);
+}
+
+/* Заголовок-вопрос (SEO) */
+.blog-card__title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+    color: var(--color-title-text);
+    text-align: center;
+    margin: 0 0 0.35rem;
+    font-weight: 800;
+}
+
+/* Короткий текст */
+.blog-card__excerpt {
+    justify-self: center;
+    /* margin: 1rem 0 auto 0; */
+    color: var(--color-text);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* обрезаем, чтобы влезало в 60% */
+    -webkit-box-orient: vertical;
+}
+
+/* Кнопка */
+.blog-card__cta {
+    padding: 0.4rem 0.8rem;
+    max-height: fit-content;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: var(--button-neon-shadow);
+}
+
+/* Адаптив */
+@media (max-width: 1000px) {
+    .blog {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog__grid {
+        grid-template-columns: 1fr;
+    }
+}

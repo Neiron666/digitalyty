@@ -1,0 +1,32 @@
+# Домашняя
+/index.html                  /                           301
+
+# Корневые страницы (явный список, чтобы не задеть /haifa/, /afula/ и т.п.)
+/about.html                  /about/                     301
+/about/                      /about.html                 200
+/accessibility.html          /accessibility/             301
+/accessibility/              /accessibility.html         200
+/contact.html                /contact/                   301
+/contact/                    /contact.html               200
+/privacy.html                /privacy/                   301
+/privacy/                    /privacy.html               200
+/terms.html                  /terms/                     301
+/terms/                      /terms.html                 200
+/services.html               /services/                  301
+/services/                   /services.html              200
+/thank-you.html              /thank-you/                 301
+/thank-you/                  /thank-you.html             200
+/sitemap.html                /sitemap/                   301
+/sitemap/                    /sitemap.html               200
+
+# /pages/:slug (один уровень)
+/pages/:slug.html            /pages/:slug/               301
+/pages/:slug                 /pages/:slug/               301
+/pages/:slug/                /pages/:slug.html           200
+
+# /pages/:section/:slug (два уровня) — твои три правила
+/pages/:section/:slug        /pages/:section/:slug/      301
+/pages/:section/:slug.html   /pages/:section/:slug/      301
+/pages/:section/:slug/       /pages/:section/:slug.html  200
+
+/*    /index.html   200

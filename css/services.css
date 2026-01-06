@@ -1,0 +1,441 @@
+body {
+    background-image: url("/images/services/בניית_אתרים_ודפי_נחיתה_רקע\ \(2\).png");
+    background-size: fill;
+    background-position: center center;
+}
+
+:root {
+    --toc-bg: #111215;
+    --toc-fg: #e8eaf0;
+    --toc-accent: #00e6ff;
+    --toc-border: rgba(255, 255, 255, 0.12);
+    --toc-chip: rgba(255, 255, 255, 0.06);
+    --toc-chip-active: rgba(0, 230, 255, 0.12);
+}
+
+/* Отступ для плавного скролла с учётом фиксированного хедера */
+[id] {
+    scroll-margin-top: 130px; /* подбери значение под реальную высоту хедера */
+}
+h3,
+.services-title {
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: larger;
+}
+
+/* Reusable illustration block (без inline CSS) */
+.illus {
+    display: block;
+    margin: 12px 0 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    overflow: hidden;
+}
+.illus--media-site {
+    aspect-ratio: 21 / 9; /* держим CLS без width/height */
+    width: 100%;
+}
+.illus__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* вписываем иллюстрацию в рамку */
+    display: block;
+}
+
+.illus__img--cover {
+    object-fit: cover; /* обрезаем иллюстрацию по краям */
+}
+
+/* ПРОЗРАЧНЫЙ ХЕДЕР */
+.header::before {
+    position: relative;
+    z-index: -1;
+}
+
+.header--services {
+    position: relative;
+    color: #fff;
+    padding: clamp(56px, 8vw, 96px) 0;
+    background: transparent; /* <- фон убран */
+    box-shadow: none; /* тень не нужна — фон общий под страницей */
+    text-align: center;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* затемнение */
+    z-index: -1;
+}
+.header__container--services {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ПОЛУПРОЗРАЧНАЯ ПОДЛОЖКА (панель) */
+.hero__panel {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: clamp(18px, 2.6vw, 28px) clamp(16px, 2.2vw, 24px);
+    background: rgba(17, 18, 21, 0.7); /* полупрозрачный фон */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); /* для Safari */
+}
+
+/* Chips */
+.hero__chipline {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 1rem 0;
+}
+.chip {
+    display: inline-block;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-weight: 700;
+}
+.chip--accent {
+    background: rgba(0, 230, 255, 0.12);
+    border-color: rgba(0, 230, 255, 0.45);
+    color: #e7fbff;
+}
+
+/* Заголовок и подзаголовки */
+.hero--services .hero__title {
+    margin: 0.2rem 0 0.7rem;
+    font-weight: 900;
+    font-size: clamp(28px, 5vw, 48px);
+    line-height: 1.15;
+}
+.hero--services .hero__title .accent {
+    background: linear-gradient(90deg, #00e6ff, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.hero--services .hero__lede {
+    margin: 0 auto 0.6rem;
+    max-width: 70ch;
+    font-size: clamp(14px, 2.2vw, 18px);
+    color: rgba(255, 255, 255, 0.96);
+    background: rgba(10, 16, 24, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+}
+.hero__micro {
+    color: var(--color-accent);
+    margin: 0.2rem auto 1rem;
+    max-width: 60ch;
+    opacity: 0.95;
+}
+
+/* CTA */
+.hero__cta {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.button--lg {
+    padding: 0.85rem 1.25rem;
+    font-size: 1.05rem;
+}
+
+/* Исправление LTR-бренда внутри RTL */
+.brand-ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+/* ===== MAIN: Services ===== */
+
+/* TOC */
+.toc {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 60px; /* подстрой под высоту хедера */
+    z-index: 20;
+    background: var(--toc-bg);
+    border: 1px solid var(--toc-border);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.03);
+}
+
+/* Кнопка-аккордеон */
+.toc__toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: transparent;
+    color: var(--toc-fg);
+    border: 0;
+    border-radius: 14px;
+    font-size: 1rem;
+    text-align: start;
+    cursor: pointer;
+    outline: none;
+}
+.toc__toggle:hover,
+.toc__toggle:focus {
+    box-shadow: 0 0 10px rgba(0, 230, 255, 0.25);
+}
+.toc__caret {
+    transition: transform 0.2s ease;
+}
+.toc__toggle[aria-expanded="true"] .toc__caret {
+    transform: rotate(180deg);
+}
+
+/* Панель с пунктами (анимация высоты) */
+.toc__panel {
+    overflow: hidden;
+    transition: grid-template-rows 0.25s ease, opacity 0.2s ease;
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    padding-inline: 16px;
+}
+.toc__panel.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    padding-bottom: 12px;
+}
+.toc__panel > * {
+    min-height: 0; /* для grid-анимации */
+}
+
+/* Список ссылок */
+.toc__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.toc__item {
+    flex: 0 0 auto;
+}
+.toc__link {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--toc-chip);
+    color: var(--toc-fg);
+    text-decoration: none;
+    font-size: 0.92rem;
+    line-height: 1;
+    border: 1px solid var(--toc-border);
+    transition: transform 0.15s ease, background-color 0.15s ease,
+        border-color 0.15s ease, color 0.15s ease;
+    outline: none;
+}
+.toc__link:hover,
+.toc__link:focus {
+    border-color: var(--toc-accent);
+    background: var(--toc-chip-active);
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px rgba(0, 230, 255, 0.25);
+}
+.toc__link.is-active {
+    color: var(--toc-accent);
+    background: var(--toc-chip-active);
+    border-color: var(--toc-accent);
+    box-shadow: 0 0 12px rgba(0, 230, 255, 0.35);
+}
+
+/* Article layout */
+.services-main {
+    /* max-width: 90%; */
+    /* margin: 0 auto 2rem; */
+    /* padding: 0 1rem; */
+}
+.services-article .article__content {
+    display: block;
+}
+
+/* Sections & titles */
+.services-section {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 16px;
+    box-shadow: var(--box-neon-shadow);
+    padding: clamp(16px, 3vw, 28px);
+    margin: 1rem 0;
+    gap: 0.8rem;
+}
+.services-title {
+    color: var(--color-title-text);
+    font-size: clamp(20px, 3.2vw, 28px);
+    font-weight: 800;
+    margin: 0 0 0.8rem 0;
+    text-align: center;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card {
+    background: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1rem;
+}
+.card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+}
+
+/* Lists */
+.list-check {
+    list-style: none;
+    margin: 0.4rem 0 0 0;
+    padding: 0;
+}
+.list-check li {
+    position: relative;
+    padding-inline-start: 1.6em;
+    margin: 0.25rem 0;
+}
+.list-check li::before {
+    content: "✔";
+    position: absolute;
+    inset-inline-start: 0;
+    color: var(--color-accent);
+}
+
+/* Steps */
+.steps {
+    list-style: none;
+    margin: 0.2rem 0 0 0;
+    padding: 0;
+    counter-reset: stp;
+    display: grid;
+    gap: 0.6rem;
+}
+.steps li {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 0.8rem 3rem 0.8rem 2.6rem;
+    position: relative;
+    color: var(--color-black);
+}
+.steps li::before {
+    counter-increment: stp;
+    content: counter(stp);
+    position: absolute;
+    inset-inline-start: 0.7rem;
+    top: 0.65rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: #000;
+    font-weight: 900;
+}
+
+/* FAQ */
+.faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    margin: 0.6rem 0;
+    overflow: hidden;
+}
+.faq-section {
+    gap: 0;
+}
+.faq-question {
+    width: 100%;
+    text-align: inherit;
+    background: transparent;
+    color: var(--color-text);
+    padding: 0.8rem 1rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-icon {
+    opacity: 0.8;
+}
+.faq-answer {
+    display: none;
+}
+.faq-item.active .faq-answer {
+    display: block;
+    max-height: fit-content;
+    padding: 1rem 1rem 1rem;
+}
+
+/* Bottom CTA */
+.services-cta {
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 230, 255, 0.08),
+        rgba(139, 92, 246, 0.12)
+    );
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Адаптив */
+@media (max-width: 600px) {
+    .illus {
+        margin: 10px 0 14px;
+        border-radius: 10px;
+    }
+    .hero__panel {
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+    .hero--services .hero__lede {
+        font-size: 1rem;
+        padding: 0.6rem 0.75rem;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .services-title {
+        text-align: center;
+    }
+    .illus--media-site {
+        aspect-ratio: 16 / 9; /* держим CLS без width/height */
+        width: 100%;
+    }
+    body {
+        background-image: url("/images/services/בניית_אתרים_ודפי_נחיתה_רקע\ \(2\).png");
+        background-size: fill;
+        background-position: right center;
+    }
+}

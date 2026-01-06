@@ -1,0 +1,265 @@
+/* Цветовая палитра, основанная на логотипе */
+:root {
+    --color-primary: rgba(
+        255,
+        255,
+        255,
+        0.95
+    ); /* Основной цвет — светло-серый с прозрачностью */
+    --color-primary-dark: rgba(
+        0,
+        0,
+        0,
+        0.95
+    ); /* Немного темнее и полупрозрачный */
+    --color-primary-accent: rgba(
+        84,
+        199,
+        253,
+        0.95
+    ); /* Холодный неоновый акцент */
+    --color-primary-accent-scrolled: rgba(
+        84,
+        199,
+        253,
+        0.5
+    ); /* Холодный неоновый акцент */
+    --color-title-text: #00757f;
+    --color-phone-green: rgb(108, 220, 45); /* Зеленый цвет для телефона */
+    --color-primary-light: #181c20; /* Светлый нейтрально-чёрный фон */
+    --color-black: #000000; /* Абсолютный чёрный */
+
+    --color-deep-dark: #2c2c2c; /* Для карточек */
+    --color-accent: rgba(
+        84,
+        199,
+        253,
+        1
+    ); /* Холодный неон: свет робота/киберподсветка */
+    --color-white: #ffffff; /* Мягкий белый */
+    --color-text: #3f3f46; /* Светлый, но не резкий текст */
+    --color-text-secondary: #a3a3a3; /* Вторичный серый текст */
+    --color-border: #3f3f46; /* Металлический серо-синий */
+    --color-shadow: rgba(84, 199, 253, 1); /* Неоновая тень */
+    --color-shadow-strong: rgba(84, 199, 253, 1); /* Сильная неоновая тень */
+    --color-link: #00eaff; /* Ссылки — холодный неон */
+    --color-link-hover: #ffffff; /* Белый при наведении */
+    --color-button: #00eaff; /* Кнопки — киберстиль */
+    --color-button-hover: #ffffff; /* Инверсия при наведении */
+    --color-button-text: #0a0a0a; /* Чёрный текст на неоновой кнопке */
+    --button-gradient-background: linear-gradient(
+        to right,
+        var(--color-black) 0%,
+        rgba(0, 0, 0, 0.3) 100%,
+        transparent 100%
+    );
+    --white-gradient-background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.3) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    --button-neon-shadow: -5px 0 10px -2px var(--color-shadow); /* Тень для кнопок */
+    --box-neon-shadow: 0 0 10px var(--color-shadow); /* Тень для блоков */
+    --box-shadow-inset: inset 0 0 10px var(--color-black);
+}
+
+html,
+body {
+    font-size: 100%;
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ICONS */
+.icon-phone {
+    background-color: var(--color-phone-green); /* Зеленый цвет для телефона */
+    border-radius: 50%; /* Круглая иконка */
+    display: inline-block; /* Чтобы иконка была блочным элементом */
+    font-size: 24px; /* Размер иконки */
+    width: 32px;
+    height: 32px;
+    font-size: 5px; /* Размер иконки */
+    margin-left: 8px;
+    padding: 4px; /* Отступы внутри иконки */
+    vertical-align: middle; /* Вертикальное выравнивание */
+    transition: transform 0.3s ease;
+}
+
+.icon-phone:hover {
+    transform: scale(1.1); /* лёгкая анимация при наведении */
+}
+
+/* Отдельные классы для неонового стиля */
+.button:hover {
+    color: var(--color-white); /* Белый при наведении */
+    box-shadow: var(--button-neon-shadow);
+    background: var(--button-gradient-background);
+}
+
+.neon-border-bottom-2px {
+    border-bottom: 2px solid var(--color-accent); /* Добавляем рамку */
+    box-shadow: 0 0 3px var(--color-shadow);
+}
+.black-border-bottom-2px {
+    border-bottom: 2px solid var(--color-black); /* Добавляем рамку */
+    box-shadow: 0 0 3px var(--color-black);
+}
+.neon-border-2px {
+    border: 2px solid var(--color-accent); /* Добавляем рамку */
+    border-radius: 8px; /* Добавляем скругление */
+    box-shadow: 0 0 10px var(--color-shadow);
+}
+.neon-border-5px {
+    border: 5px solid var(--color-accent); /* Добавляем рамку */
+    border-radius: 20px; /* Добавляем скругление */
+    box-shadow: 0 0 10px var(--color-shadow);
+}
+
+.box-shadow {
+    box-shadow: 0 2px 5px var(--color-shadow);
+}
+
+.dark-shine {
+    color: var(--color-white); /* Белый при наведении */
+    box-shadow: -5px 0 10px -2px var(--color-shadow);
+}
+
+/* ОБЩИЕ СТИЛИ */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("images/tablet-digitalyty.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Фиксированное фоновое изображение */
+    overflow-x: hidden !important; /* Убираем горизонтальную прокрутку */
+}
+
+ul {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+/* Main reusable classes styles */
+.gradient-title {
+    background: linear-gradient(135deg, #00eaff, #0f172a);
+
+    /* стандартное свойство */
+    background-clip: text;
+    color: transparent;
+
+    /* для WebKit (Chrome, Safari) */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-title-darker {
+    background: linear-gradient(135deg, var(--color-title-text), #0f172a);
+
+    /* стандартное свойство */
+    background-clip: text;
+    color: transparent;
+
+    /* для WebKit (Chrome, Safari) */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.df-row {
+    display: flex;
+    flex-direction: row;
+}
+.df-column {
+    display: flex;
+    flex-direction: column;
+}
+.df-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gap-space {
+    gap: 2rem; /* Отступы между элементами */
+}
+
+.out__container-white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+}
+.out__container-accent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-accent);
+}
+.out__container-dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-dark);
+}
+
+.inner-container-transparent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem; /* Отступ сверху */
+    width: 90%;
+    border-radius: 8px; /* Скругление углов */
+}
+
+.inner-container-accent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 2rem auto; /* Центрирование */
+    padding: 2rem; /* Отступы */
+    background-color: var(--color-primary-accent); /* Акцентный фон */
+    border-radius: 8px; /* Скругление углов */
+}
+
+.card-flex-white-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto; /* Центрирование */
+    /* background-color: var(--color-primary); */
+    box-shadow: var(--box-neon-shadow); /* Добавляем неоновую тень */
+    border-radius: 8px; /* Скругление углов */
+}
+
+.inner-container-dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 2rem auto; /* Центрирование */
+    padding: 2rem; /* Отступы */
+    background-color: var(--color-primary-dark); /* Темный фон */
+    box-shadow: var(--box-neon-shadow); /* Добавляем неоновую тень */
+    border-radius: 8px; /* Скругление углов */
+}
+.inner-container-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 2rem auto; /* Центрирование */
+    padding: 2rem; /* Отступы */
+    background-color: var(--color-primary); /* Светлый фон */
+    box-shadow: var(--box-neon-shadow); /* Добавляем неоновую тень */
+    border-radius: 8px; /* Скругление углов */
+}

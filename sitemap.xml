@@ -1,33 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ראשי -->
   <url>
-    <loc>https://digitalyty.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.00</priority>
+    <loc>https://digitalyty.co.il/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://digitalyty.com/#home</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://digitalyty.co.il/about/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://digitalyty.com/#services</loc>
+    <loc>https://digitalyty.co.il/services/</loc>
+    <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://digitalyty.com/#why-digitalyty</loc>
+    <loc>https://digitalyty.co.il/pages/prices/</loc>
+    <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://digitalyty.com/#contact</loc>
+    <loc>https://digitalyty.co.il/pages/portfolio/</loc>
+    <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://digitalyty.com/#about</loc>
+    <loc>https://digitalyty.co.il/pages/faq/</loc>
+    <lastmod>2025-10-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://digitalyty.co.il/contact/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- שירותים מפורטים -->
+  <url>
+    <loc>https://digitalyty.co.il/pages/services-business-sites/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/pages/services-landing-pages/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/pages/services-seo/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/pages/services-digital-card/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- בלוג -->
+  <url>
+    <loc>https://digitalyty.co.il/pages/blog/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/pages/blog/landing-pages/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/pages/blog/seo/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/pages/blog/ux-for-business/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/pages/blog/business-presentation-sites/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- דפי ערים -->
+  <url><loc>https://digitalyty.co.il/tel-aviv/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://digitalyty.co.il/haifa/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://digitalyty.co.il/jerusalem/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://digitalyty.co.il/netanya/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://digitalyty.co.il/beer-sheva/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://digitalyty.co.il/tiberias/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://digitalyty.co.il/afula/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://digitalyty.co.il/nahariya/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://digitalyty.co.il/safed/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://digitalyty.co.il/kiryat-shmona/</loc><lastmod>2025-10-17</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+
+  <!-- משפטי / נגישות / מפת אתר -->
+  <url>
+    <loc>https://digitalyty.co.il/terms/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/privacy/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/accessibility/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://digitalyty.co.il/sitemap/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
 </urlset>

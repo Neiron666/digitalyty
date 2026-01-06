@@ -1,23 +1,109 @@
 {
-    "name": "Digitalyty – חברה לבניית אתרים ודפי נחיתה לעסקים קטנים",
+    "id": "https://digitalyty.co.il/",
+    "name": "Digitalyty – חברה לבניית אתרים ודפי נחיתה לעסקים",
     "short_name": "Digitalyty",
     "description": "חברה לבניית אתרים מיוחדים, אתרי תדמית, דפי נחיתה וכרטיסי ביקור דיגיטליים – עם עיצוב ייחודי והתאמה מלאה לקידום בגוגל.",
-    "start_url": "/",
+    "lang": "he",
+    "dir": "rtl",
+
+    "start_url": "/?source=pwa",
+    "scope": "/",
     "display": "standalone",
+    "display_override": ["window-controls-overlay", "standalone"],
     "background_color": "#0f172a",
     "theme_color": "#38bdf8",
     "orientation": "portrait",
-    "lang": "he",
+    "categories": ["business", "productivity"],
+
     "icons": [
         {
             "src": "/images/icon-192.png",
             "type": "image/png",
-            "sizes": "192x192"
+            "sizes": "192x192",
+            "purpose": "any maskable"
         },
         {
             "src": "/images/icon-512.png",
             "type": "image/png",
-            "sizes": "512x512"
+            "sizes": "512x512",
+            "purpose": "any maskable"
         }
-    ]
+    ],
+
+    "shortcuts": [
+        {
+            "name": "שירותים",
+            "short_name": "שירותים",
+            "url": "/services.html",
+            "icons": [
+                {
+                    "src": "/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "צור קשר",
+            "short_name": "צור קשר",
+            "url": "/contact.html",
+            "icons": [
+                {
+                    "src": "/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "תל-אביב",
+            "short_name": "תל-אביב",
+            "url": "/tel-aviv/",
+            "icons": [
+                {
+                    "src": "/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "עפולה",
+            "short_name": "עפולה",
+            "url": "/afula/",
+            "icons": [
+                {
+                    "src": "/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "טבריה",
+            "short_name": "טבריה",
+            "url": "/tiberias/",
+            "icons": [
+                {
+                    "src": "/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "חיפה",
+            "short_name": "חיפה",
+            "url": "/haifa/",
+            "icons": [
+                {
+                    "src": "/images/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+
+    "prefer_related_applications": false
 }

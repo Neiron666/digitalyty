@@ -1,0 +1,207 @@
+Структура папок
+Серийный номер тома: 8A94-4E7F
+C:.
+|   .gitignore
+|   about.html
+|   accessibility.html
+|   contact.html
+|   digitalyty-logo-3.png
+|   favicon-48x48.png
+|   fon.jpg
+|   google-background.png
+|   google-g.svg
+|   hero-logo-digitalyty.mp4
+|   index.html
+|   manifest.webmanifest
+|   privacy.html
+|   project-tree.txt
+|   robots.txt
+|   root.txt
+|   script.js
+|   service-worker.js
+|   services.html
+|   sitemap.html
+|   sitemap.xml
+|   style.css
+|   terms.html
+|   thank-you.html
+|   _headers
+|   _redirects
+|   
++---.vscode
+|       settings.json
+|       
++---afula
+|       index.html
+|       
++---animations
+|       Analytics Character Animation.json
+|       Analytics Character Animation.lottie
+|       code dark.json
+|       
++---beer-sheva
+|       index.html
+|       
++---css
+|       about.css
+|       blog-article.css
+|       blog.css
+|       contact.css
+|       portfolio.css
+|       prices.css
+|       services.css
+|       
++---haifa
+|       index.html
+|       
++---icons
+|   |   1-steps.svg
+|   |   1.svg
+|   |   2-steps.svg
+|   |   2.svg
+|   |   3-steps.svg
+|   |   3.svg
+|   |   4-steps.svg
+|   |   5-steps.svg
+|   |   6-steps.svg
+|   |   device-desktop-check.svg
+|   |   facebook.svg
+|   |   globe.svg
+|   |   landing-page-icon.svg
+|   |   mail.svg
+|   |   phone.svg
+|   |   settings.svg
+|   |   smartphone.svg
+|   |   
+|   \---social-icons
+|           facebook.svg
+|           mail.svg
+|           phone.svg
+|           whatsapp.svg
+|           
++---images
+|   |   20250715_1453_3D Customer Support Elements_simple_compose_01k06ytk0hf77rtdscjpphj7df.png
+|   |   20250716_0855_Futuristic Portfolio Showcase_simple_compose_01k08wrmbvf5va058vhmz7zznd.png
+|   |   20250716_0928_Futuristic Holographic Interface_simple_compose_01k08yn3j2f8qb6ngkzkqsdvpb.png
+|   |   business-grow.png
+|   |   customer-support.png
+|   |   desktop.png
+|   |   digital-globe.png
+|   |   digitalyty-choose.png
+|   |   digitalyty-mini.jpg
+|   |   digitalyty.png
+|   |   favicon-32.png
+|   |   favicon-48x48.png
+|   |   icon-192.png
+|   |   icon-512.png
+|   |   landing-page.png
+|   |   marriage.png
+|   |   marriage2.png
+|   |   marriage3.png
+|   |   portfolio.png
+|   |   responsive.png
+|   |   seo.png
+|   |   tablet-digitalyty.png
+|   |   ???? ??? ???????.png
+|   |   ????? ??? ??????? ????? ????.png
+|   |   ????? ??? ??????? ????? ????.psd
+|   |   ????? ??? ???????.jpg
+|   |   ????? ??? ???????.png
+|   |   ????? ????? ?????????? (2).png
+|   |   ????? ????? ??????????.png
+|   |   ?????-???-???????-???.png
+|   |   ?????-???-??????????-?????-??-????.png
+|   |   ?????????-?????-?????.png
+|   |   ????-??????-???-???????.png
+|   |   
+|   +---about
+|   |       My-Digitalyty.png
+|   |       ?????-?????????-?????_????_???????.jpg
+|   |       
+|   +---blog
+|   |       blog-header.png
+|   |       blog-landing.png
+|   |       blog-seo.png
+|   |       blog-ux.png
+|   |       ?????_???_?????_????.png
+|   |       
+|   +---faq
+|   |       ?????_??_?????_?????.jpg
+|   |       
+|   +---og
+|   |       og-1200x630.psd
+|   |       og-dig-1200x630.jpg
+|   |       
+|   +---portfolio
+|   |       pc-lakmi-long-screenshot.jpg
+|   |       pc-slrTours-long-screenshot.jpg
+|   |       pc-zmanlhofsha-long-screenshot.jpg
+|   |       phone-lakmi-long-screenshot.jpg
+|   |       phone-slrTours-long-screenshot.jpg
+|   |       phone-zmanlhofsha-long-screenshot.jpg
+|   |       
+|   +---prices
+|   |       ????-?????-???.png
+|   |       
+|   \---services
+|           ?????_?????_????_?????_??? (2).png
+|           ?????_?????_????_?????_???.png
+|           ?????_?????_??????.png
+|           ?????_??_?????.png
+|           ?????_?????_??????_SEO.png
+|           
++---jerusalem
+|       index.html
+|       
++---js
+|       accessibility-widget-embed.js
+|       blog-article.js
+|       faq.js
+|       form.js
+|       nav.js
+|       potfolio.js
+|       scrollTop.js
+|       service-worker-register.js
+|       services.js
+|       strip-trackers.js
+|       video-tuggle.js
+|       
++---kiryat-shmona
+|       index.html
+|       
++---nahariya
+|       index.html
+|       
++---netanya
+|       index.html
+|       
++---pages
+|   |   about.html
+|   |   blog.html
+|   |   contact.html
+|   |   faq.html
+|   |   portfolio.html
+|   |   prices.html
+|   |   services-business-sites.html
+|   |   services-landing-pages.html
+|   |   services-seo.html
+|   |   
+|   \---blog
+|           business-presentation-sites.html
+|           landing-pages.html
+|           seo.html
+|           ux-for-business.html
+|           
++---safed
+|       index.html
+|       
++---tel-aviv
+|       index.html
+|       ????-Digitalyty-?????-?????-???-????.png
+|       
++---tiberias
+|       index.html
+|       
+\---video
+        Digitalyty-bg3.mp4
+        
