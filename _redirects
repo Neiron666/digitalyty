@@ -1,32 +1,102 @@
-# Домашняя
+# =========================
+# 0) Critical files (never rewrite/redirect)
+# =========================
+/service-worker.js           /service-worker.js          200
+/manifest.webmanifest        /manifest.webmanifest       200
+/sitemap.xml                 /sitemap.xml                200
+/robots.txt                  /robots.txt                 200
+
+# =========================
+# 1) Asset directories pass-through
+# =========================
+/css/*                       /css/:splat                 200
+/js/*                        /js/:splat                  200
+/images/*                    /images/:splat              200
+/icons/*                     /icons/:splat               200
+/video/*                     /video/:splat               200
+/animations/*                /animations/:splat          200
+
+# Root assets with extensions should pass through (avoid HTML rewrites)
+# (keeps /digitalyty-logo-3.png etc safe)
+/*.*                         /:splat                      200
+
+# =========================
+# 2) Home
+# =========================
 /index.html                  /                           301
 
-# Корневые страницы (явный список, чтобы не задеть /haifa/, /afula/ и т.п.)
-/about.html                  /about/                     301
-/about/                      /about.html                 200
-/accessibility.html          /accessibility/             301
-/accessibility/              /accessibility.html         200
-/contact.html                /contact/                   301
-/contact/                    /contact.html               200
-/privacy.html                /privacy/                   301
-/privacy/                    /privacy.html               200
-/terms.html                  /terms/                     301
-/terms/                      /terms.html                 200
-/services.html               /services/                  301
-/services/                   /services.html              200
-/thank-you.html              /thank-you/                 301
-/thank-you/                  /thank-you.html             200
-/sitemap.html                /sitemap/                   301
-/sitemap/                    /sitemap.html               200
+# =========================
+# 3) Root pages canonical: NO trailing slash, NO .html
+#    (explicit list - so we don't break /haifa/, /afula/, etc.)
+# =========================
+/services/                   /services                   301
+/services.html               /services                   301
+/services                    /services.html              200
 
-# /pages/:slug (один уровень)
-/pages/:slug.html            /pages/:slug/               301
-/pages/:slug                 /pages/:slug/               301
-/pages/:slug/                /pages/:slug.html           200
+/privacy/                    /privacy                    301
+/privacy.html                /privacy                    301
+/privacy                     /privacy.html               200
 
-# /pages/:section/:slug (два уровня) — твои три правила
-/pages/:section/:slug        /pages/:section/:slug/      301
-/pages/:section/:slug.html   /pages/:section/:slug/      301
-/pages/:section/:slug/       /pages/:section/:slug.html  200
+/terms/                      /terms                      301
+/terms.html                  /terms                      301
+/terms                       /terms.html                 200
 
-/*    /index.html   200
+/accessibility/              /accessibility              301
+/accessibility.html          /accessibility              301
+/accessibility               /accessibility.html         200
+
+/sitemap/                    /sitemap                    301
+/sitemap.html                /sitemap                    301
+/sitemap                     /sitemap.html               200
+
+/thank-you/                  /thank-you                  301
+/thank-you.html              /thank-you                  301
+/thank-you                   /thank-you.html             200
+
+# Legacy root about/contact -> canonical under /pages
+/about                       /pages/about                301
+/about/                      /pages/about                301
+/about.html                  /pages/about                301
+
+/contact                     /pages/contact              301
+/contact/                    /pages/contact              301
+/contact.html                /pages/contact              301
+
+# =========================
+# 4) Cities (folder-style, MUST end with /)
+# =========================
+/afula                       /afula/                     301
+/beer-sheva                  /beer-sheva/                301
+/haifa                       /haifa/                     301
+/jerusalem                   /jerusalem/                 301
+/kiryat-shmona               /kiryat-shmona/             301
+/nahariya                    /nahariya/                  301
+/netanya                     /netanya/                   301
+/safed                       /safed/                     301
+/tel-aviv                    /tel-aviv/                  301
+/tiberias                    /tiberias/                  301
+
+# Optional hardening (in case someone hits index.html directly):
+/afula/index.html            /afula/                     301
+/beer-sheva/index.html       /beer-sheva/                301
+/haifa/index.html            /haifa/                     301
+/jerusalem/index.html        /jerusalem/                 301
+/kiryat-shmona/index.html    /kiryat-shmona/             301
+/nahariya/index.html         /nahariya/                  301
+/netanya/index.html          /netanya/                   301
+/safed/index.html            /safed/                     301
+/tel-aviv/index.html         /tel-aviv/                  301
+/tiberias/index.html         /tiberias/                  301
+
+# =========================
+# 5) /pages/* canonical: NO trailing slash, NO .html
+# =========================
+# One-level: /pages/about (file: /pages/about.html)
+/pages/:slug/                /pages/:slug                301
+/pages/:slug.html            /pages/:slug                301
+/pages/:slug                 /pages/:slug.html           200
+
+# Two-level: /pages/blog/seo (file: /pages/blog/seo.html)
+/pages/:section/:slug/       /pages/:section/:slug       301
+/pages/:section/:slug.html   /pages/:section/:slug       301
+/pages/:section/:slug        /pages/:section/:slug.html  200

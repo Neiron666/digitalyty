@@ -34,7 +34,7 @@
         {
             "name": "שירותים",
             "short_name": "שירותים",
-            "url": "/services.html",
+            "url": "/services",
             "icons": [
                 {
                     "src": "/images/icon-192.png",

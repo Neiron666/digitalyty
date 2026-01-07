@@ -41,18 +41,12 @@
     <meta property="og:image:alt" content="Digitalyty — בניית אתרים בירושלים והסביבה" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale:alternate" content="en_US" />
-    <meta property="og:locale:alternate" content="ru_RU" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="בניית אתרים בירושלים | Digitalyty" />
     <meta name="twitter:description" content="אתרים מהירים, מעוצבים ומוכנים לקידום בגוגל — ממוקדים לירושלים והסביבה." />
     <meta name="twitter:image" content="https://digitalyty.co.il/images/og/og-dig-1200x630.jpg" />
-
-    <!-- Hreflang -->
-    <link rel="alternate" href="https://digitalyty.co.il/jerusalem/" hreflang="he-il" />
-    <link rel="alternate" href="https://digitalyty.co.il/jerusalem/" hreflang="x-default" />
 
     <!-- PWA / Icons -->
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -154,7 +148,7 @@
   "url": "https://digitalyty.co.il/",
   "name": "Digitalyty – בניית אתרים בירושלים",
   "alternateName": "Digitalyty Jerusalem",
-  "inLanguage": ["he-IL","en","ru"],
+    "inLanguage": "he-IL",
   "publisher": {
     "@id": "https://digitalyty.co.il/#organization"
   },
@@ -257,11 +251,11 @@
               "name": "Main navigation",
               "url": "https://digitalyty.co.il/",
               "hasPart": [
-                { "@type": "WebPage", "name": "שירותים", "url": "https://digitalyty.co.il/services.html" },
-                { "@type": "WebPage", "name": "אודות", "url": "https://digitalyty.co.il/about.html" },
-                { "@type": "WebPage", "name": "צור קשר", "url": "https://digitalyty.co.il/contact.html" },
-                { "@type": "WebPage", "name": "מדיניות פרטיות", "url": "https://digitalyty.co.il/privacy.html" },
-                { "@type": "WebPage", "name": "תנאי שימוש", "url": "https://digitalyty.co.il/terms.html" },
+                { "@type": "WebPage", "name": "שירותים", "url": "https://digitalyty.co.il/services" },
+                { "@type": "WebPage", "name": "אודות", "url": "https://digitalyty.co.il/pages/about" },
+                { "@type": "WebPage", "name": "צור קשר", "url": "https://digitalyty.co.il/pages/contact" },
+                { "@type": "WebPage", "name": "מדיניות פרטיות", "url": "https://digitalyty.co.il/privacy" },
+                { "@type": "WebPage", "name": "תנאי שימוש", "url": "https://digitalyty.co.il/terms" },
                 { "@type": "WebPage", "name": "בניית אתרים בירושלים", "url": "https://digitalyty.co.il/jerusalem/" },
                 { "@type": "WebPage", "name": "בניית אתרים בעפולה", "url": "https://digitalyty.co.il/afula/" },
                 { "@type": "WebPage", "name": "בניית אתרים בטבריה", "url": "https://digitalyty.co.il/tiberias/" },
@@ -309,37 +303,70 @@
 
             <!-- НОВОЕ МЕНЮ -->
             <ul class="nav__menu" id="nav__menu" dir="rtl">
-                <li class="nav__menu-item"><a href="index.html" class="nav__menu-link">דף הבית</a></li>
+                <li class="nav__menu-item">
+                    <a href="/" class="nav__menu-link">דף הבית</a>
+                </li>
 
                 <!-- Dropdown: שירותים -->
                 <li class="nav__menu-item nav__menu-item--has-submenu">
                     <button class="nav__menu-link nav__menu-link--toggle" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="submenu-services">
+                        aria-controls="submenu-services" type="button">
                         שירותים
                         <span class="nav__menu-caret" aria-hidden="true">▾</span>
                     </button>
+
                     <ul class="nav__submenu" id="submenu-services" role="menu">
-                        <li class="nav__submenu-item"><a role="menuitem" href="/pages/services-business-sites.html"
-                                class="nav__submenu-link">בניית אתרים לעסקים</a></li>
-                        <li class="nav__submenu-item"><a role="menuitem" href="/pages/services-landing-pages.html"
-                                class="nav__submenu-link">בניית דפי נחיתה</a></li>
                         <li class="nav__submenu-item">
-                            <a role="menuitem" href="/pages/services-digital-card.html" class="nav__submenu-link">
+                            <a role="menuitem" href="/pages/services-business-sites" class="nav__submenu-link">
+                                בניית אתרים לעסקים
+                            </a>
+                        </li>
+
+                        <li class="nav__submenu-item">
+                            <a role="menuitem" href="/pages/services-landing-pages" class="nav__submenu-link">
+                                בניית דפי נחיתה
+                            </a>
+                        </li>
+
+                        <li class="nav__submenu-item">
+                            <a role="menuitem" href="/pages/services-digital-card" class="nav__submenu-link">
                                 בניית כרטיס ביקור דיגיטלי
                             </a>
                         </li>
-                        <li class="nav__submenu-item"><a role="menuitem" href="/pages/services-seo.html"
-                                class="nav__submenu-link">SEO קידום אורגני</a></li>
+
+                        <li class="nav__submenu-item">
+                            <a role="menuitem" href="/pages/services-seo" class="nav__submenu-link">
+                                SEO קידום אורגני
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
-                <li class="nav__menu-item"><a href="/pages/portfolio.html" class="nav__menu-link">תיק עבודות</a></li>
-                <li class="nav__menu-item"><a href="/pages/prices.html" class="nav__menu-link">מחירים</a></li>
-                <li class="nav__menu-item"><a href="/pages/about.html" class="nav__menu-link">אודות</a></li>
-                <li class="nav__menu-item"><a href="/pages/blog.html" class="nav__menu-link">בלוג</a></li>
-                <li class="nav__menu-item"><a href="/pages/faq.html" class="nav__menu-link">שאלות ותשובות</a></li>
-                <li class="nav__menu-item"><a href="/pages/contact.html" class="nav__menu-link">צור קשר</a></li>
+                <li class="nav__menu-item">
+                    <a href="/pages/portfolio" class="nav__menu-link">תיק עבודות</a>
+                </li>
+
+                <li class="nav__menu-item">
+                    <a href="/pages/prices" class="nav__menu-link">מחירים</a>
+                </li>
+
+                <li class="nav__menu-item">
+                    <a href="/pages/about" class="nav__menu-link">אודות</a>
+                </li>
+
+                <li class="nav__menu-item">
+                    <a href="/pages/blog" class="nav__menu-link">בלוג</a>
+                </li>
+
+                <li class="nav__menu-item">
+                    <a href="/pages/faq" class="nav__menu-link">שאלות ותשובות</a>
+                </li>
+
+                <li class="nav__menu-item">
+                    <a href="/pages/contact" class="nav__menu-link">צור קשר</a>
+                </li>
             </ul>
+
 
             <div class="nav__logo-wrapper">
                 <div class="nav__logo neon-border-2px"><img src="/Digitalyty-logo-3.png" alt="לוגו Digitalyty" /></div>
@@ -862,9 +889,9 @@
                         <label class="contact__checkbox">
                             <input id="privacy" type="checkbox" name="privacy" required>
                             אני מסכים ל
-                            <a href="/privacy.html" target="_blank" rel="noopener noreferrer">מדיניות הפרטיות</a>
+                            <a href="/privacy" target="_blank" rel="noopener noreferrer">מדיניות הפרטיות</a>
                             וגם ל
-                            <a href="/terms.html" target="_blank" rel="noopener noreferrer">תנאי השימוש באתר</a>
+                            <a href="/terms" target="_blank" rel="noopener noreferrer">תנאי השימוש באתר</a>
                         </label>
 
                         <button type="submit" class="button">שלח</button>
@@ -935,12 +962,13 @@
                     <div class="footer__col">
                         <h3 class="footer__title">שירותים</h3>
                         <ul class="footer__list">
-                            <li><a href="/pages/services-business-sites.html">בניית אתרים לעסקים</a></li>
-                            <li><a href="/pages/services-landing-pages.html">בניית דפי נחיתה</a></li>
-                            <li><a href="/pages/services-seo.html">קידום אורגני (SEO)</a></li>
-                            <li><a href="/pages/prices.html">מחירון 2025</a></li>
-                            <li><a href="/pages/portfolio.html">פורטפוליו</a></li>
-                            <li><a href="/pages/contact.html">צור קשר</a></li>
+                            <li><a href="/pages/services-business-sites">בניית אתרים לעסקים</a></li>
+                            <li><a href="/pages/services-landing-pages">בניית דפי נחיתה</a></li>
+                            <li><a href="/pages/services-seo">קידום אורגני (SEO)</a></li>
+                            <li><a href="/pages/services-digital-card">כרטיס ביקור דיגיטלי</a></li>
+                            <li><a href="/pages/prices">מחירון </a></li>
+                            <li><a href="/pages/portfolio">פורטפוליו</a></li>
+                            <li><a href="/pages/contact">צור קשר</a></li>
                         </ul>
                     </div>
 
@@ -948,27 +976,28 @@
                         <h3 class="footer__title">עמודים</h3>
                         <ul class="footer__list">
                             <li><a href="/">דף הבית</a></li>
-                            <li><a href="/pages/about.html">אודות</a></li>
-                            <li><a href="/pages/blog.html">בלוג</a></li>
-                            <li><a href="/pages/faq.html">שאלות נפוצות</a></li>
-                            <li><a href="/privacy.html">מדיניות פרטיות</a></li>
-                            <li><a href="/terms.html">תנאי שימוש</a></li>
-                            <li><a href="/accessibility.html">הצהרת נגישות</a></li>
-                            <li><a href="/sitemap.html" aria-current="page">מפת אתר</a></li>
+                            <li><a href="/pages/about">אודות</a></li>
+                            <li><a href="/pages/blog">בלוג</a></li>
+                            <li><a href="/pages/faq">שאלות נפוצות</a></li>
+                            <li><a href="/privacy">מדיניות פרטיות</a></li>
+                            <li><a href="/terms">תנאי שימוש</a></li>
+                            <li><a href="/accessibility">הצהרת נגישות</a></li>
+                            <li><a href="/sitemap">מפת אתר</a></li>
                         </ul>
                     </div>
 
                     <div class="footer__col">
                         <h3 class="footer__title">פוסטים נבחרים</h3>
                         <ul class="footer__list">
-                            <li><a href="/pages/blog/seo.html">מה זה SEO?</a></li>
-                            <li><a href="/pages/blog/landing-pages.html">דף נחיתה שממיר</a></li>
-                            <li><a href="/pages/blog/ux-for-business.html">UX לעסקים</a></li>
-                            <li><a href="/pages/blog/business-presentation-sites.html">בניית אתרי תדמית לעסק</a></li>
+                            <li><a href="/pages/blog/seo">מה זה SEO?</a></li>
+                            <li><a href="/pages/blog/landing-pages">דף נחיתה שממיר</a></li>
+                            <li><a href="/pages/blog/ux-for-business">UX לעסקים</a></li>
+                            <li><a href="/pages/blog/business-presentation-sites">בניית אתרי תדמית לעסק</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
+
 
             <div class="footer__bottom">
                 <p>© <span id="year"></span> Digitalyty — כל הזכויות שמורות.</p>

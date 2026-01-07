@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="googlebot" content="max-image-preview:large" />
-  <link rel="canonical" href="https://digitalyty.co.il/pages/blog/" />
+  <link rel="canonical" href="https://digitalyty.co.il/pages/blog" />
 
   <!-- Base SEO -->
   <title>בלוג Digitalyty – מדריכים, טיפים ו-SEO לעסקים בישראל</title>
@@ -32,7 +32,7 @@
   <meta property="og:locale" content="he_IL" />
   <meta property="og:title" content="בלוג Digitalyty – מדריכים וטיפים לעסקים בישראל" />
   <meta property="og:description" content="מדריכים על SEO, UX ובניית אתרים לעסקים קטנים ובינוניים בישראל." />
-  <meta property="og:url" content="https://digitalyty.co.il/pages/blog/" />
+  <meta property="og:url" content="https://digitalyty.co.il/pages/blog" />
   <meta property="og:image" content="https://digitalyty.co.il/images/og/og-dig-1200x630.jpg" />
   <meta property="og:image:alt" content="בלוג Digitalyty – מאמרים ומדריכים מקצועיים" />
   <meta property="og:image:width" content="1200" />
@@ -118,7 +118,7 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://digitalyty.co.il/pages/blog/seo.html"
+    "@id": "https://digitalyty.co.il/pages/blog/seo"
   },
   "headline": "מה זה SEO ולמה האתר שלך צריך את זה?",
   "description": "מהו קידום אורגני (SEO), איך בניית תוכן נכונה ומבנה טכני מדויקים מייצרים תנועה איכותית ומובילים לפניות אמיתיות לעסק שלך.",
@@ -148,7 +148,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://digitalyty.co.il/pages/blog/landing-pages.html" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://digitalyty.co.il/pages/blog/landing-pages" },
   "headline": "איך לבנות דף נחיתה שממיר?",
   "description": "הכותרת, ההצעה, ההוכחה החברתית והקריאה לפעולה — ארבעת היסודות שהופכים מבקר לליד ומעלים המרות.",
   "image": "https://digitalyty.co.il/images/blog/blog-landing.png",
@@ -164,7 +164,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://digitalyty.co.il/pages/blog/ux-basics.html" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://digitalyty.co.il/pages/blog/ux-for-business" },
   "headline": "עיצוב UX לעסקים – מה חשוב לדעת?",
   "description": "ניווט ברור, היררכיה ויזואלית וטעינה מהירה — כך משפרים חוויית משתמש ומגדילים זמן שהיה והמרות.",
   "image": "https://digitalyty.co.il/images/blog/blog-ux.png",
@@ -185,11 +185,11 @@
     "url": "https://digitalyty.co.il/",
     "name": "Digitalyty – בלוג ומדריכים לעסקים",
     "alternateName": "Digitalyty Blog",
-    "inLanguage": ["he-IL","en","ru"],
+    "inLanguage": "he-IL",
     "publisher": { "@id": "https://digitalyty.co.il/#organization" },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://digitalyty.co.il/pages/blog.html?s={search_term_string}",
+      "target": "https://digitalyty.co.il/pages/blog?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -200,8 +200,8 @@
   {
     "@context": "https://schema.org",
     "@type": ["WebPage","CollectionPage"],
-    "@id": "https://digitalyty.co.il/pages/blog.html#webpage",
-    "url": "https://digitalyty.co.il/pages/blog.html",
+    "@id": "https://digitalyty.co.il/pages/blog#webpage",
+    "url": "https://digitalyty.co.il/pages/blog",
     "name": "בלוג Digitalyty – מדריכים, מאמרים וטיפים לעסקים",
     "isPartOf": { "@id": "https://digitalyty.co.il/#website" },
     "about": {
@@ -224,7 +224,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://digitalyty.co.il/" },
-      { "@type": "ListItem", "position": 2, "name": "בלוג", "item": "https://digitalyty.co.il/pages/blog.html" }
+      { "@type": "ListItem", "position": 2, "name": "בלוג", "item": "https://digitalyty.co.il/pages/blog" }
     ]
   }
   </script>
@@ -257,38 +257,41 @@
 
     <!-- НОВОЕ МЕНЮ -->
     <ul class="nav__menu" id="nav__menu" dir="rtl">
-      <li class="nav__menu-item"><a href="/index.html" class="nav__menu-link">דף הבית</a></li>
+      <li class="nav__menu-item"><a href="/" class="nav__menu-link">דף הבית</a></li>
 
       <!-- Dropdown: שירותים -->
       <li class="nav__menu-item nav__menu-item--has-submenu">
-        <button class="nav__menu-link nav__menu-link--toggle" aria-haspopup="true" aria-expanded="false"
+        <button type="button" class="nav__menu-link nav__menu-link--toggle" aria-haspopup="true" aria-expanded="false"
           aria-controls="submenu-services">
           שירותים
           <span class="nav__menu-caret" aria-hidden="true">▾</span>
         </button>
-        <ul class="nav__submenu" id="submenu-services" role="menu">
-          <li class="nav__submenu-item"><a role="menuitem" href="/pages/services-business-sites.html"
-              class="nav__submenu-link">בניית אתרים לעסקים</a></li>
-          <li class="nav__submenu-item"><a role="menuitem" href="/pages/services-landing-pages.html"
-              class="nav__submenu-link">בניית דפי נחיתה</a></li>
-          <li class="nav__submenu-item">
-            <a role="menuitem" href="/pages/services-digital-card.html" class="nav__submenu-link">
-              בניית כרטיס ביקור דיגיטלי
-            </a>
-          </li>
-          <li class="nav__submenu-item"><a role="menuitem" href="/pages/services-seo.html" class="nav__submenu-link">SEO
-              קידום אורגני</a></li>
 
+        <ul class="nav__submenu" id="submenu-services" role="menu">
+          <li class="nav__submenu-item">
+            <a role="menuitem" href="/pages/services-business-sites" class="nav__submenu-link">בניית אתרים לעסקים</a>
+          </li>
+          <li class="nav__submenu-item">
+            <a role="menuitem" href="/pages/services-landing-pages" class="nav__submenu-link">בניית דפי נחיתה</a>
+          </li>
+          <li class="nav__submenu-item">
+            <a role="menuitem" href="/pages/services-digital-card" class="nav__submenu-link">בניית כרטיס ביקור
+              דיגיטלי</a>
+          </li>
+          <li class="nav__submenu-item">
+            <a role="menuitem" href="/pages/services-seo" class="nav__submenu-link">SEO קידום אורגני</a>
+          </li>
         </ul>
       </li>
 
-      <li class="nav__menu-item"><a href="/pages/portfolio.html" class="nav__menu-link">תיק עבודות</a></li>
-      <li class="nav__menu-item"><a href="/pages/prices.html" class="nav__menu-link">מחירים</a></li>
-      <li class="nav__menu-item"><a href="/pages/about.html" class="nav__menu-link">אודות</a></li>
-      <li class="nav__menu-item"><a href="/pages/blog.html" class="nav__menu-link">בלוג</a></li>
-      <li class="nav__menu-item"><a href="/pages/faq.html" class="nav__menu-link">שאלות ותשובות</a></li>
-      <li class="nav__menu-item"><a href="/pages/contact.html" class="nav__menu-link">צור קשר</a></li>
+      <li class="nav__menu-item"><a href="/pages/portfolio" class="nav__menu-link">תיק עבודות</a></li>
+      <li class="nav__menu-item"><a href="/pages/prices" class="nav__menu-link">מחירים</a></li>
+      <li class="nav__menu-item"><a href="/pages/about" class="nav__menu-link">אודות</a></li>
+      <li class="nav__menu-item"><a href="/pages/blog" class="nav__menu-link">בלוג</a></li>
+      <li class="nav__menu-item"><a href="/pages/faq" class="nav__menu-link">שאלות ותשובות</a></li>
+      <li class="nav__menu-item"><a href="/pages/contact" class="nav__menu-link">צור קשר</a></li>
     </ul>
+
 
     <div class="nav__logo-wrapper">
       <div class="nav__logo neon-border-2px"><img src="/Digitalyty-logo-3.png" alt="לוגו Digitalyty" /></div>
@@ -326,7 +329,7 @@
       <section class="blog__flex" aria-label="מאמרים אחרונים">
         <!-- CARD 1 -->
         <article class="blog-card">
-          <a class="blog-card__link" href="blog/seo.html">
+          <a class="blog-card__link" href="/pages/blog/seo">
             <div class="blog-card__media">
               <img src="/images/blog/blog-seo.png" alt="מה זה SEO ולמה האתר שלך צריך את זה" loading="lazy">
             </div>
@@ -342,7 +345,7 @@
 
         <!-- CARD 2 -->
         <article class="blog-card">
-          <a class="blog-card__link" href="blog/landing-pages.html">
+          <a class="blog-card__link" href="/pages/blog/landing-pages">
             <div class="blog-card__media">
               <img src="/images/blog/blog-landing.png" alt="איך לבנות דף נחיתה שממיר" loading="lazy">
             </div>
@@ -358,7 +361,7 @@
 
         <!-- CARD 3 -->
         <article class="blog-card">
-          <a class="blog-card__link" href="blog/ux-for-business.html">
+          <a class="blog-card__link" href="/pages/blog/ux-for-business">
             <div class="blog-card__media">
               <img src="/images/blog/blog-ux.png" alt="עיצוב UX לעסקים – מה חשוב לדעת" loading="lazy">
             </div>
@@ -375,7 +378,7 @@
 
         <!-- CARD 4 -->
         <article class="blog-card">
-          <a class="blog-card__link" href="blog/business-presentation-sites.html">
+          <a class="blog-card__link" href="/pages/blog/business-presentation-sites">
             <div class="blog-card__media">
               <img src="/images/blog/בניית_אתר_תדמית_בלוג.png"
                 alt="בניית אתרי תדמית לעסק – מהו אתר תדמיתי ולמה הוא חשוב" loading="lazy">
@@ -452,38 +455,40 @@
         <div class="footer__col">
           <h3 class="footer__title">שירותים</h3>
           <ul class="footer__list">
-            <li><a href="/pages/services-business-sites.html">בניית אתרים לעסקים</a></li>
-            <li><a href="/pages/services-landing-pages.html">בניית דפי נחיתה</a></li>
-            <li><a href="/pages/services-seo.html">קידום אורגני (SEO)</a></li>
-            <li><a href="/pages/prices.html">מחירון 2025</a></li>
-            <li><a href="/pages/portfolio.html">פורטפוליו</a></li>
-            <li><a href="/pages/contact.html">צור קשר</a></li>
+            <li><a href="/pages/services-business-sites">בניית אתרים לעסקים</a></li>
+            <li><a href="/pages/services-landing-pages">בניית דפי נחיתה</a></li>
+            <li><a href="/pages/services-seo">קידום אורגני (SEO)</a></li>
+            <li><a href="/pages/prices">מחירון </a></li>
+            <li><a href="/pages/portfolio">פורטפוליו</a></li>
+            <li><a href="/pages/contact">צור קשר</a></li>
           </ul>
         </div>
+
 
         <div class="footer__col">
           <h3 class="footer__title">עמודים</h3>
           <ul class="footer__list">
             <li><a href="/">דף הבית</a></li>
-            <li><a href="/pages/about.html">אודות</a></li>
-            <li><a href="/pages/blog.html">בלוג</a></li>
-            <li><a href="/pages/faq.html">שאלות נפוצות</a></li>
-            <li><a href="/privacy.html">מדיניות פרטיות</a></li>
-            <li><a href="/terms.html">תנאי שימוש</a></li>
-            <li><a href="/accessibility.html">הצהרת נגישות</a></li>
-            <li><a href="/sitemap.html" aria-current="page">מפת אתר</a></li>
+            <li><a href="/pages/about">אודות</a></li>
+            <li><a href="/pages/blog">בלוג</a></li>
+            <li><a href="/pages/faq">שאלות נפוצות</a></li>
+            <li><a href="/privacy">מדיניות פרטיות</a></li>
+            <li><a href="/terms">תנאי שימוש</a></li>
+            <li><a href="/accessibility">הצהרת נגישות</a></li>
+            <li><a href="/sitemap">מפת אתר</a></li>
           </ul>
         </div>
 
         <div class="footer__col">
           <h3 class="footer__title">פוסטים נבחרים</h3>
           <ul class="footer__list">
-            <li><a href="/pages/blog/seo.html">מה זה SEO?</a></li>
-            <li><a href="/pages/blog/landing-pages.html">דף נחיתה שממיר</a></li>
-            <li><a href="/pages/blog/ux-for-business.html">UX לעסקים</a></li>
-            <li><a href="/pages/blog/business-presentation-sites.html">בניית אתרי תדמית לעסק</a></li>
+            <li><a href="/pages/blog/seo">מה זה SEO?</a></li>
+            <li><a href="/pages/blog/landing-pages">דף נחיתה שממיר</a></li>
+            <li><a href="/pages/blog/ux-for-business">UX לעסקים</a></li>
+            <li><a href="/pages/blog/business-presentation-sites">בניית אתרי תדמית לעסק</a></li>
           </ul>
         </div>
+
       </nav>
     </div>
 
